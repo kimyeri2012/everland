@@ -1,0 +1,1586 @@
+/* header */
+.header{
+    width: auto;
+    height:110px;
+    /* border-top:1px solid #fff; */
+    border-bottom:1px solid #cbcbcb;
+    z-index: 9999;
+    position: sticky;
+    /* padding-top: 22px; */
+    top: -26px;
+    background-color: white;
+}
+
+/* logo */
+.logo{
+    width:160px;
+    height:66px;
+    margin:30px 0 15px 60px;
+    float: left;
+}
+.logo a {
+    display: block;
+    width: 120px;
+    height: 66px;
+    background: url(../images/logo3.jpg)no-repeat;
+    text-indent: -9999px;
+}
+
+/* ----------------------------------------------------gnb */
+.gnb{
+    padding-top:26px ;
+    z-index: 9999;
+}
+/* .gnb >ul{
+    width: 1200px;
+    height: 40px;
+    margin: auto;
+} */
+.gnb_1 > a{
+    font-weight:bold;
+}
+
+.gnb>ul>li{font-size:18px;font:"나눔고딕";float: left;width: 170px;height: 40px;line-height: 30px;text-align: center;position: relative;}
+.gnb>ul>li>a{ padding-top:30px ; display:block; height: 44px;}
+.gnb ul ul{z-index: 9999;width: 100%; position: absolute; left: 0px;top: 84px;border:1px solid #cbcbcb;background: white; }
+
+/* -----------------------fm---------- */
+.fm{
+    /* width: 400px; */
+    height: 83px;
+    margin:auto;
+    position: relative;
+}
+.fm{
+    position:absolute;
+    right: 60px;
+    top: 34px;
+}
+.fm_search{
+    float: left;
+    margin-right:16px;
+}
+
+.fm_search a{
+    display: block;
+    width: 50px;
+    height: 83px;
+    background: url(../images/fast1_1.png)no-repeat;
+    position: relative;
+}
+.fm_search span{
+    position: absolute;
+    top: 50px;
+    left:2px;
+}
+
+.fm_smart{
+    float: left;
+    margin-right:16px
+    
+}
+
+.fm_smart a{
+    display: block;
+    width: 76px;
+    height: 83px;
+    background: url(../images/fast1_2.png)no-repeat;
+    position: relative;
+}
+.fm_smart span{
+    position: absolute;
+    top: 50px;
+    left: -10px
+}
+
+.fm_stu{
+    float: left;
+    margin-right:14px
+}
+
+.fm_stu a{
+    display: block;
+    width: 65px;
+    height: 83px;
+    background: url(../images/fast1_3.png)no-repeat;
+    position: relative;
+    
+}
+.fm_stu span{
+    position: absolute;
+    top: 50px;
+    left: -10px
+}
+
+.fm_entr{
+    float: left;
+}
+
+.fm_entr a{
+    display: block;
+    width: 62px;
+    height: 83px;
+    background: url(../images/fast1_4.png)no-repeat;
+    position: relative;
+}
+.fm_entr span{
+    position: absolute;
+    top: 50px;
+    left: -8px
+}
+
+
+
+/* ----------------user_mu */
+.user_mu{
+    font-size: 14px;
+    height: 18px;
+    position: absolute;
+    top: 4px;
+    right: 64px;
+    /* background-color: #00f; */
+}
+
+.user_log{
+    float: left;
+}
+.user_log:after{
+    content:"|";
+    margin:10px;
+}
+.user_join{
+    float: left;
+}
+.user_join:after{
+    content:"|";
+    margin:10px;
+}
+.user_cos{
+    float: left;
+}
+.user_cos:after{
+    content:"|";
+    margin:10px;
+}
+.user_lang{
+    float: left;
+}
+/* -----------------main */
+.att{
+    width: 1200px;
+    height: 5000px;
+    /* border: 1px solid red; */
+    margin: auto;
+    position: relative;
+    /* overflow: hidden; */
+}
+.att_img {
+    width: 1600px;
+    height: 350px;
+    font-size: 44px;
+    color: white;
+    margin:0 0 0 -200px;
+    /* background: url(../images/att_main.jpg) no-repeat; */
+    background: url(../images/att_main.jpg) no-repeat;
+    /* border:2px solid purple; */
+    text-align: center;
+    padding-top: 100px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.att_search{
+    width: 1200px;
+    /* border: 1px solid red; */
+    margin: 2px auto 0 ;
+}
+.search_bar{
+    height: 76px;
+    margin-top: -78px;
+    background-color: white;
+    border: 1px solid #cbcbcb;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top:20px;
+    box-sizing: border-box;
+    position: relative;
+}
+.area{
+    margin-left: 60px;
+}
+.sel_a{
+    width: 210px;
+    height: 44px;
+    border-radius: 50px;
+    padding: .8em .7em;
+    font-size: 16px;
+    -webkit-appearance: none;    
+    -moz-appearance: none;    
+    appearance: none;    
+    /* background: url(../images/arrow.jpg) no-repeat 95% 50%;  */
+    background: url(../images/arrow.jpg) no-repeat 95% 50%; 
+    /* border: 1px solid orange; */
+    
+}
+select::-ms-expand {    display: none;}
+
+.cm{
+    margin-left: 96px;
+}
+.in_cm{
+    width: 210px;
+    height: 38px;
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+.per{
+    margin-left: 96px;
+    position: relative;
+}
+.in_per{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    position: absolute;
+    left: 118px;
+    top:-4px;
+    
+}
+.att_list{
+    width: 1200px;
+    height: 5000px;
+    padding: 30px 8px;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    position: relative;
+}
+.att_T a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    /* background: url(../images/att_search1.jpg) no-repeat; */
+    background: url(../images/att_search1.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    
+}
+.att_T > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 340px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+
+.att_sapari a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search2.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left:19px ;
+}
+.att_sapari > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 340px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+
+.att_rost a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search3.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left: 19px;
+    
+}
+.att_rost > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 340px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+.att_panda a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search4.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left: 19px;
+    
+}
+.att_panda > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 340px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+.att_amaz a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search5.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-top: 30px;
+    
+}
+.att_amaz > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+    
+}
+
+.att_sunder a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search6.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left:19px ;
+    margin-top: 30px;
+}
+.att_sunder > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+
+.att_colom a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search7.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left: 19px;
+    margin-top: 30px;
+    
+}
+.att_colom > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+.att_ziro a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search8.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left: 19px;
+    margin-top: 30px;
+    
+}
+.att_ziro > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+.att_robot a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search9.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-top: 30px;
+    
+}
+.att_robot > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+    
+}
+
+.att_double a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search10.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left:19px ;
+    margin-top: 30px;
+}
+.att_double > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+
+.att_lets a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search11.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left: 19px;
+    margin-top: 30px;
+    
+}
+.att_lets > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+.att_rolling a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search12.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left: 19px;
+    margin-top: 30px;
+    
+}
+.att_rolling > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+.att_huri a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search13.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-top: 30px;
+    
+}
+.att_huri > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+    
+}
+
+.att_champ a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search14.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left:19px ;
+    margin-top: 30px;
+}
+.att_champ > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+
+.att_rapter a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search15.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left: 19px;
+    margin-top: 30px;
+    
+}
+.att_rapter > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+.att_kids a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search16.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left: 19px;
+    margin-top: 30px;
+    
+}
+.att_kids > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+.att_hello a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search17.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-top: 30px;
+    
+}
+.att_hello > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+    
+}
+
+.att_magic a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search18.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left:19px ;
+    margin-top: 30px;
+}
+.att_magic > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+
+.att_royal a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search19.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left: 19px;
+    margin-top: 30px;
+    
+}
+.att_royal > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+.att_secret a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search20.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left: 19px;
+    margin-top: 30px;
+    
+}
+.att_secret > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+.att_car a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search21.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-top: 30px;
+    
+}
+.att_car > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+    
+}
+
+.att_flash a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search22.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left:19px ;
+    margin-top: 30px;
+}
+.att_flash > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+
+.att_piter a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search23.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left: 19px;
+    margin-top: 30px;
+    
+}
+.att_piter > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+.att_ele a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search24.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left: 19px;
+    margin-top: 30px;
+    
+}
+.att_ele > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+.att_rocar a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search25.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-top: 30px;
+    
+}
+.att_rocar > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+    
+}
+
+.att_bong a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search26.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left:19px ;
+    margin-top: 30px;
+}
+.att_bong > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+
+.att_bump a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search27.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left: 19px;
+    margin-top: 30px;
+    
+}
+.att_bump > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+.att_sky a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search28.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left: 19px;
+    margin-top: 30px;
+    
+}
+.att_sky > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+.att_swing a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search29.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-top: 30px;
+    
+}
+.att_swing > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+    
+}
+
+.att_btrain a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search30.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left:19px ;
+    margin-top: 30px;
+}
+.att_btrain > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+
+.att_space a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search31.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left: 19px;
+    margin-top: 30px;
+    
+}
+.att_space > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+.att_spuki a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search32.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left: 19px;
+    margin-top: 30px;
+    
+}
+.att_spuki > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+.att_racing a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search33.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-top: 30px;
+    
+}
+.att_racing > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+    
+}
+
+.att_boll a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search34.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left:19px ;
+    margin-top: 30px;
+}
+.att_boll > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+
+.att_rili a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search35.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left: 19px;
+    margin-top: 30px;
+    
+}
+.att_rili > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+.att_fly a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search36.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left: 19px;
+    margin-top: 30px;
+    
+}
+.att_fly > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+.att_play a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search37.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-top: 30px;
+    
+}
+.att_play > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+    
+}
+
+.att_festiv a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search38.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left:19px ;
+    margin-top: 30px;
+}
+.att_festiv > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+
+.att_sp_tour a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search39.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left: 19px;
+    margin-top: 30px;
+    
+}
+.att_sp_tour > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+.att_rani a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search40.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-left: 19px;
+    margin-top: 30px;
+    
+}
+.att_rani > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+.att_shoot a{
+    width: 281px;
+    height: 380px;
+    /* border: 1px solid red; */
+    background: url(../images/att_search41.jpg) no-repeat;
+    padding:280px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    float:left;
+    position: relative;
+    border: 1px solid #cbcbcb;
+    margin-top: 30px;
+    
+}
+.att_shoot > span{
+    width: 148px;
+    height: 30px;
+    background: url(../images/att_area.png) no-repeat;
+    /* text-align: right; */
+    /* text-align: end; */
+    display: block;
+    /* border: 1px solid red; */
+    margin: 370px 0 0 -260px;
+    padding: 6px 0 0 20px;
+    box-sizing: border-box;
+    float:left;
+}
+
+
+/* --------------footer */
+.footer{
+    /* padding-top:50px; */
+    font-size: 16px;
+    height: 240px;
+    background:#f7f7f7;
+}
+.footer_wrap{
+    width: 1200px;
+    margin: auto;
+}
+.footer_top{
+    width: 932px;
+    height: 80px;
+}
+.footer_top ul li{
+    margin-top: 30px;
+    float: left;
+}
+
+.ft_1::after{
+    content: "|";
+    margin: 40px;
+}
+.ft_2::after{
+    content: "|";
+    margin: 40px;
+}
+.ft_3::after{
+    content: "|";
+    margin: 40px;
+}
+.ft_4::after{
+    content: "|";
+    margin: 40px;
+}
+/* -------------fb */
+.footer_bottom{
+    height: 75px;
+    /* border: 1px solid #00f; */
+}
+
+.txt1_1{
+    float: left;
+}
+.txt1_2{
+    float: left;
+}
+.txt1_3{
+    float: left;
+}
+.txt1_1::after{
+    content: "|";
+    margin: 16px;
+    
+}
+.txt1_2::after{
+    content: "|";
+    margin: 16px;
+}
+.txt1_3::after{
+    content: "|";
+    margin: 16px;
+}
+/* .fb_txt2 p{
+    float: left;
+} */
+.txt2_1{
+    float: left;
+}
+.txt2_2{
+    float: left;
+}
+.txt2_3{
+    float: left;
+}
+
+.txt2_1::after{
+    content: "|";
+    margin: 16px;
+}
+.txt2_2::after{
+    content: "|";
+    margin: 16px;
+}
+.txt2_3::after{
+    content: "|";
+    margin: 16px;
+}
+.copy{
+    margin:40px 0 30px 0;
+}

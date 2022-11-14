@@ -1,0 +1,391 @@
+/* header */
+.header{
+    height:200px;
+    border-top:1px solid #fff
+}
+
+/* logo */
+.logo{
+    width:180px;
+    height:98px;
+    margin:34px auto 15px
+}
+.logo a {
+    display: block;
+    width: 180px;
+    height: 98px;
+    background: url(../images/logo.jpg)no-repeat;
+    text-indent: -9999px;
+}
+
+/* ----------------------------------------------------gnb */
+.gnb{
+    border-top:1px solid #cbcbcb;
+}
+.gnb >ul{
+    width: 1200px;
+    height: 62px;
+    margin: auto;
+}
+.gnb_1{
+    float:left;
+}
+.gnb_1 a {
+    display: block;
+    width: 240px;
+    height: 62px;
+    background: url(../images/gnb_1.jpg)no-repeat;
+    text-indent: -9999px;
+}
+.gnb_2{
+    float:left;
+}
+
+.gnb_2 a {
+    display: block;
+    width: 240px;
+    height: 62px;
+    background: url(../images/gnb_2.jpg)no-repeat;
+    text-indent: -9999px;
+}
+.gnb_3{
+    float:left;
+}
+.gnb_3 a {
+    
+    width: 240px;
+    height: 62px;
+    background: url(../images/gnb_3.jpg)no-repeat;
+    text-indent: -9999px;
+    display:block;
+}
+.gnb_4{
+    float:left;
+}
+.gnb_4 a {
+    display: block;
+    width: 240px;
+    height: 62px;
+    background: url(../images/gnb_4.jpg)no-repeat;
+    text-indent: -9999px;
+}
+.gnb_5{
+    float:right;
+    
+}
+.gnb_5 a {
+    display: block;
+    width: 240px;
+    height: 62px;
+    background: url(../images/gnb_5.jpg)no-repeat;
+    text-indent: -9999px;
+}
+/* -----------------------fm---------- */
+.fm{
+    width: 1200px;
+    height: 83px;
+    margin:auto;
+    position: relative;
+}
+.fm > ul{
+    position:absolute;
+    right: 0;
+    top: -150px;
+
+}
+.fm_search{
+    float: left;
+    margin-right:20px;
+}
+
+.fm_search a{
+    display: block;
+    width: 50px;
+    height: 83px;
+    padding:60px 0 0 8px;
+    box-sizing:border-box;
+    background: url(../images/fast_1.png)no-repeat;
+    
+    
+}
+/* .fm_search:after{
+    margin: 0 10px;
+} */
+.fm_smart{
+    float: left;
+    margin-right:20px
+}
+
+.fm_smart a{
+    display: block;
+    width: 76px;
+    height: 83px;
+    padding:60px 1px 0 0;
+    box-sizing:border-box;
+    background: url(../images/fast_2.png)no-repeat;
+    
+}
+.fm_stu{
+    float: left;
+    margin-right:20px
+}
+
+.fm_stu a{
+    display: block;
+    width: 65px;
+    height: 83px;
+    padding:60px 0 0 0;
+    margin: auto;
+    box-sizing:border-box;
+    background: url(../images/fast_3.png)no-repeat;
+    
+}
+.fm_entr{
+    float: left;
+}
+
+.fm_entr a{
+    display: block;
+    width: 62px;
+    height: 83px;
+    padding:60px 0 0 0px;
+    box-sizing:border-box;
+    background: url(../images/fast_4.png)no-repeat;
+    
+    
+    
+}
+
+
+/* ----------------user_mu */
+.user_mu{
+    width: 1200px;
+    height: 18px;
+    margin: auto;
+    position: relative;
+}
+.user_mu >ul{
+    position: absolute;
+    right: 0;
+    top: -280px;
+}
+.user_log{
+    float: left;
+}
+.user_log:after{
+    content:"|";
+    margin:0 10px
+}
+.user_join{
+    float: left;
+}
+.user_join:after{
+    content:"|";
+    margin:0 10px
+}
+.user_cos{
+    float: left;
+}
+.user_cos:after{
+    content:"|";
+    margin:0 10px
+}
+.user_lang{
+    float: left;
+}
+
+/* -------------------group */
+.group{
+    width: 1200px;
+    height: 76px;
+    /* width:243px;
+    height: 76px; */
+    margin: auto;
+    position: relative;
+}
+.group >dl{
+    position:absolute;
+    left: 0;
+    top: -240px;
+}
+/* .group >dd{
+    float: left;
+} */
+.group_1{
+    float: left;
+}
+.group_1 a {
+    display: block;
+    width: 109px;
+    height: 76px;
+    padding:44px 0 0 10px;
+    box-sizing:border-box;
+    background: url(../images/group_1.jpg)no-repeat;
+}
+.group_2{
+    float: left;
+}
+.group_2 a {
+    display: block;
+    width: 110px;
+    height: 76px;
+    padding:44px 0 0 25px;
+    box-sizing:border-box;
+    background: url(../images/group_2.jpg)no-repeat;
+}
+/* -----------------main */
+.join_alr{
+    height: 700px;
+}
+.join_alr h2{
+    padding-top: 60px;
+    font-size: 40px;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+.join_alr >p{
+    padding-top: 40px;
+    font-size: 24px;
+    text-align: center;
+}
+.in_wrap{
+    width: 598px;
+    margin: auto;
+    padding-top: 80px;
+    /* border: 1px solid red; */
+}
+.in_name{
+    width: 600px;
+    height: 60px;
+    font-size: 20px;
+    padding: 7px 20px;
+    border: 1px solid #cbcbcb;
+    display: block;
+}
+.in_brth{
+    width: 600px;
+    height: 60px;
+    font-size: 20px;
+    padding: 7px 20px;
+    border: 1px solid #cbcbcb;
+    display: block;
+}
+.in_num{
+    width: 600px;
+    height: 60px;
+    font-size: 20px;
+    padding: 7px 20px;
+    border: 1px solid #cbcbcb;
+    display: block;
+}
+.in_bt{
+    margin: 70px auto ;
+    display: block;
+    background-color: #ff6703;
+    color: white;
+    border: 0;
+    width: 240px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 50px;
+}
+.join_alr{
+    width: 600px;
+    /* border: 1px solid red; */
+    display: block;
+    position: relative;
+    margin: auto;
+}
+
+/* --------------footer */
+.footer{
+    /* padding-top:50px; */
+    font-size: 16px;
+    height: 240px;
+    background:#f7f7f7;
+}
+.footer_wrap{
+    width: 1200px;
+    margin: auto;
+}
+.footer_top{
+    width: 932px;
+    height: 80px;
+}
+.footer_top ul li{
+    margin-top: 30px;
+    float: left;
+}
+
+.ft_1::after{
+    content: "|";
+    margin: 40px;
+}
+.ft_2::after{
+    content: "|";
+    margin: 40px;
+}
+.ft_3::after{
+    content: "|";
+    margin: 40px;
+}
+.ft_4::after{
+    content: "|";
+    margin: 40px;
+}
+/* -------------fb */
+.footer_bottom{
+    height: 75px;
+    /* border: 1px solid #00f; */
+}
+
+.txt1_1{
+    float: left;
+}
+.txt1_2{
+    float: left;
+}
+.txt1_3{
+    float: left;
+}
+.txt1_1::after{
+    content: "|";
+    margin: 16px;
+    
+}
+.txt1_2::after{
+    content: "|";
+    margin: 16px;
+}
+.txt1_3::after{
+    content: "|";
+    margin: 16px;
+}
+/* .fb_txt2 p{
+    float: left;
+} */
+.txt2_1{
+    float: left;
+}
+.txt2_2{
+    float: left;
+}
+.txt2_3{
+    float: left;
+}
+
+.txt2_1::after{
+    content: "|";
+    margin: 16px;
+}
+.txt2_2::after{
+    content: "|";
+    margin: 16px;
+}
+.txt2_3::after{
+    content: "|";
+    margin: 16px;
+}
+.copy{
+    margin:40px 0 30px 0;
+}

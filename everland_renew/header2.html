@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVERLAND</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".gnb>ul>li,nav_bg").mouseenter(function () {
+                $(this).find("ul").stop().slideDown("fast");
+            })
+            $(".gnb>ul>li").mouseleave(function () {
+                $(this).find("ul").stop().slideUp("fast");
+            })
+        })
+    </script>
+
+</head>
+<body>
+    <header id="header" class="header">
+        <h1 class="logo"><a href="#">에버랜드</a></h1>
+
+        <nav class="gnb">
+            <h2 class="hide">주요 메뉴</h2>
+            <ul>
+                <li class="gnb_1"><a href="#">이용정보</a>
+                    <ul>
+                        <li><a href="">뉴스공지</a></li>
+                        <li><a href="">이용방법</a></li>
+                        <li><a href="">운영시간</a></li>
+                        <li><a href="">운휴안내</a></li>
+                        <li><a href="">교통정보</a></li>
+                        <li><a href="">편의시설</a></li>
+                        <li><a href="">가이드맵</a></li>
+                        <li><a href="">모바일앱</a></li>
+                    </ul>
+            </li>
+                <li class="gnb_1"><a href="#">요금&프로모션</a>
+                    <ul>
+                        <li><a href="">이용요금</a></li>
+                        <li><a href="">제휴카드</a></li>
+                        <li><a href="">스페셜 프로모션</a></li>
+                        <li><a href="">드림투어</a></li>
+                        <li><a href="">체험 프로그램</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_1"><a href="#">즐길거리</a>
+                    <ul>
+                        <li><a href="">추천 코스</a></li>
+                        <li><a href="">어트랙션</a></li>
+                        <li><a href="">엔터테인먼트</a></li>
+                        <li><a href="">주토피아(동물원)</a></li>
+                        <li><a href="">플랜토피아(정원)</a></li>
+                        <li><a href="">레스토랑</a></li>
+                        <li><a href="">선물샵 | MD 쇼핑몰</a></li>
+                        <li><a href="">글램핑</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_1"><a href="#">멤버십</a>
+                    <ul>
+                        <li><a href="">연간 이용권</a></li>
+                        <li><a href="">시즌 이용권</a></li>
+                        <li><a href="">스피드웨이</a></li>
+                        <li><a href="">동물사랑단</a></li>
+                        <li><a href="">식물사랑단</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_1"><a href="#">에버랜드 더알아보기</a>
+                    <ul>
+                        <li><a href="">Editor's Pick</a></li>
+                        <li><a href="">에버랜드 스토리</a></li>
+                        <li><a href="">에버랜드 테마뮤직</a></li>
+                    </ul>
+                    
+                </li>
+            </ul>
+        </nav>
+
+        <div class="fm">
+            <h2 class="hide">빠른메뉴</h2>
+            <ul>
+                <li class="fm_search"><a href="#"><span class="fm_s">검색</span></a></li>
+                <li class="fm_smart"><a href="#"><span>스마트예매</span></a></li>
+                <li class="fm_stu"><a href="#"><span>학생단체</span> </a></li>
+                <li class="fm_entr"><a href="#"><span>기업단체</span></a></li>
+            </ul>
+        </div>
+
+        <div class="user_mu">
+            <h2 class="hide">사용자 메뉴 </h2>
+            <ul>
+                <li class="user_log"><a href="#">로그인</a></li>
+                <li class="user_join"><a href="#">회원가입</a></li>
+                <li class="user_cos"><a href="#">손님상담센터</a></li>
+                <li class="user_lang"><a href="#">언어선택</a></li>
+            </ul>
+        </div>
+
+        
+        <!-- <div class="group">
+            <dl>
+                <dt class="hide">그룹사 홈페이지</dt>
+                <dd class="group_1"><a href="#">캐리비안베이</a></dd>
+                <dd class="group_2"><a href="#">홈브리지</a></dd>
+            </dl>
+        </div> -->
+    </header>
+ 
+    
+</body>

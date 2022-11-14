@@ -1,0 +1,341 @@
+--------------------------------------------------------------------------------------------------------------------------------------
+                                                               ** 에버랜드 UI 설계 **  -- 회원가입
+--------------------------------------------------------------------------------------------------------------------------------------
+
+** UI 설계: 회원관리 **
+    * vscode root 디렉토리 *
+        1.c:\xampp\htdocs
+
+    * 사용 디렉토리 *
+        1.c:\xampp\htdocs\everland
+
+    * 준비사항 *
+        1. c:\xampp\xampp-controll.exe 실행
+        2. Apache, MY-SQL 실행
+
+    * 로컬 사이트 주소 *
+        1. http://localhost 또는 http://127.0.0.1
+        2. everland주소 : http://localhost/everland
+
+
+    * 디렉토리 구성 *
+        1. 프로젝트 디렉토리: everland
+        2. 회원가입/수정/탈퇴 : everland/members
+        3. 로그인/로그아웃 : everland/login
+        4. 공통파일 : everland/inc
+        5. 관리자 페이지 : everland/admin
+        6. 관리자 - 회원관리 : everland/admin/members
+
+
+---------------------------------------------------------------------------------------------------------
+    * 페이지 구성 : 메인 페이지 *
+        1. everland/index.html
+         
+
+    * 페이지 구성 : 회원 정보 *
+        1. 회원가입 페이지
+        everland/members/join.php
+
+        2. 회원가입 처리 페이지
+        everland/members/insert.php
+
+        3. 가입 완료 페이지
+        everland/members/welcome.php
+
+        4. 정보수정
+        everland/members/member_info.php
+
+        5. 정보 수정 처리
+        everland/members/edit.php
+
+        6. 정보 삭제
+        everland/members/mem_delete.php
+
+        7. 삭제 완료 페이지
+        everland/members/delete_ok.php
+
+        8. 아이디 중복 검사 입력
+        id_search.php
+
+        9. 아이디 중복 검사
+        id_serach_result.php
+        
+     
+        
+
+    *---------------------------------------------------------------------------------------------공통 파일------------*
+    * 공통 파일 *
+        *1.DB 연결 객체 *
+        everland/inc/dbcon.php
+
+        *2.세션객채*
+        everland/inc/session.php
+
+        3. 로그인 체크
+        everland/inc/login_check.php
+
+    -----------------------------------------------------------------------------
+
+    * 로그인 : everland/login *
+        1. 로그인
+        everland/login/login.php
+
+        2. 로그인 처리
+        everland/login/login_ok.php
+
+        3. 로그아웃
+        everland/login/logout.php
+    
+    
+    -----------------------------------------------------------------------------
+
+    * 관리자 페이지:everland/admin
+    admin.php
+    *관리자 로그인 : everland/admin/login
+        1. 로그인
+        login.php
+        
+        2. 로그인 처리
+        login_ok.php
+        3. 로그아웃
+        logout.php
+    * 관리자 회원관리: everland/admin/members *
+
+        1. 회원 목록
+        list.php
+
+        2. 회원가입 처리 페이지
+        insert.php
+
+        3. 가입 완료 페이지
+        welcome.php
+
+        4. 정보수정
+       member_info.php
+
+        5. 정보 수정 처리
+       edit.php
+
+        6. 정보 삭제
+       mem_delete.php
+
+        7. 삭제 완료 페이지
+       delete_ok.php
+
+        8. 아이디 중복 검사 입력
+        id_search.php
+
+        9. 아이디 중복 검사
+        id_serach_result.php
+
+    -----------------------------------------------------------------------------
+    * 입력 항목 *
+    -------------------------------------------------
+    항목 | 요소 | type | value | name | id | class | 제약
+    -------------------------------------------------
+    이름 | input | text | | u_name | u_name | u_name | 필수입력
+    아이디 | input | text | | u_id | u_id | u_id | 필수입력, 4~12 글자
+    아이디 중복확인 | button | button | | | | | 팝업창 출력
+    비밀번호 | input | password | | pwd | pwd | pwd | 필수입력, 4~12 글자(,정규식)
+    비밀번호 확인 | input | password | | re_pwd | re_pwd | re_pwd | 비밀번호와 값 동일
+    전화번호 | input | text | | moblie | moblie | moblie | 숫자만 입력
+    생년월일 | input | text | | birth | birth | birth | 8라지 숫자
+    이메일 아이디 | input | text | | email_id | email_id | email_id | 
+    이메일 도메인 | input | text | | email_dns | email_dns | email_dns | 
+    도메인 선택 | select | | | email_sel | email_sel | email_sel | 항목 선택시 도메인 입력
+    도메인 항목: 직접입력 | option | | | | |
+    도메인 항목: 네이버 | option | | naver.com | | |
+    도메인 항목: 다음 | option | | daum.com | | |
+    도메인 항목: 구글 | option | | google.com | | |
+    성별:남 | input | radio | m | gender | male | gender | 
+    성별:여 | input | radio | f | gender | female | gender | 
+    약관동의 | input | checkbox | y | apply | apply | apply | 필수체크
+    이전으로 | button | button | | | | | 이전페이지로 이동
+    가입하기 | button | submit | | | | | 
+    
+    * 데이터 베이스 생성 *
+    DB명 : everland
+
+
+    create database everland
+    default character set utf8
+    default collate utf8_general_ci;
+
+    ** 테이블 설계 **
+    Table명 : members
+
+
+    ---------------------------------------------------------------
+    항목 | 필드명 | 데이터타입(길이) | 제약
+    ---------------------------------------------------------------
+    create table members(
+        idx int auto_increment primary key,
+        u_name varchar(30) not null,
+        u_id varchar(20) not null,
+        pwd varchar(20) not null,
+        mobile varchar(15),
+        birth date, 
+        email varchar(50), 
+        gender char(1),
+        reg_date datetime
+    );
+
+
+    * 테이블 삭제
+    drop table if exist members;
+
+    * 관리자 입력 *
+    insert into members(
+        u_name,u_id,pwd,
+        mobile,birth, email, 
+        gender,reg_date
+    ) values(
+        '관리자','admin','1234',
+        '01011112222','20221031','admin@abc.com',
+        'm','2020-10-30'
+    );
+    
+=============================================================================================
+                                    *** UI 설계 : 공지사항 ***
+
+==============================================================================================  
+
+** vscode root 디렉토리 **
+1. c:\xampp\htdocs
+
+================================================
+
+** 사용 디렉토리 **
+1. c:\xampp\htdocs\everland
+
+================================================
+
+** 준비사항 **
+1. c:\xampp\xampp-controll.exe 실행
+2. Apache, My-SQL 실행
+
+================================================
+
+** 로컬 사이트 주소 **
+1. http://localhost 또는 http://127.0.0.1
+2. everland 주소 : http://localhost/everland
+
+================================================
+
+* 디렉토리 구성 *
+1. 프로젝트 디렉토리 : everland
+2. 공지사항 : everland/notice
+3. 로그인/로그아웃 : everland/login
+4. 공통파일 : everland/inc
+5. 관리자 페이지 : everland/admin
+6. 관리자 회원관리 : everland/admin/notice
+
+===================================================================================
+                                        UI 설계 - 공지사항
+========================================================================================
+
+** 페이지 구성 **
+* 메인 페이지
+everland/index.html
+
+---------------------------------------------------------------------------------
+
+* 공지사항 : everland/notice
+
+1. 글 쓰기 : write.php
+
+2. 글 쓰기 처리 페이지 :insert.php
+
+3. 목록 페이지 : list.php
+
+4. 내용 보기 : view.php
+
+5. 글 수정 : modify.php
+
+6. 글 수정 처리 : edit.php
+
+7. 글 삭제 : delete.php
+
+---------------------------------------------------------------------------------
+
+* 공통 파일 : everland/inc
+1. DB 연결 객체
+dbcon.php
+
+2. 세션 객체
+session.php
+
+3. 관리자 로그인 체크
+admin_check.php
+
+================================================
+
+* 입력 항목 *
+---------------------------------------------------------------------
+항목 | 요소 | type | value | name | id | class | 제약
+---------------------------------------------------------------------
+제목 | input | text |  | n_title | n_title | n_title | 필수입력
+내용 | textarea |  |  | n_content | n_content | n_content | 필수입력
+
+================================================
+
+** 데이터 베이스 설계 **
+DB명 : front
+
+
+* DB 목록 확인
+show databases;
+
+
+* DB 삭제
+drop database front;
+
+
+* DB 생성
+create database front
+default character set utf8
+default collate utf8_general_ci;
+
+================================================
+
+** 테이블 설계 **
+Table명 : notice
+-------------------------------------------------------------------
+항목 | 필드명 | 데이터타입(길이) | 제약
+-------------------------------------------------------------------
+인덱스 | idx | int | AI, PK
+제목 | n_title | varchar(255) | NN
+내용 | n_content | text | NN
+작성자 | writer | varchar(20) | NN
+작성일자 | w_date | datetime | NN
+조회수 | cnt | int | default 0
+
+
+* DB 선택
+use front;
+
+
+* 테이블 목록 확인
+show tables;
+
+
+* 테이블 삭제
+drop table if exists notice;
+
+
+* 테이블 생성 : notice;
+create table notice(
+    idx int auto_increment primary key,
+    n_title varchar(255) not null,
+    n_content text not null,
+    writer varchar(20) not null,
+    w_date datetime not null,
+    cnt int default 0
+);
+
+
+* 테이블 목록 확인
+show tables;
+
+* 테이블 구조 확인
+desc notice;

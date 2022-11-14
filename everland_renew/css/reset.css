@@ -1,0 +1,33 @@
+/*CSS 초기화태그들이 가지고 있는 기본속성과 값을 코딩하기 편한 값으로 변경*/
+body,h1,h2,h3,p,div,ul,li,dl,dt,dd{
+    margin:0;
+    padding:0
+}
+body {
+    font-family: "맑은 고딕", "나눔고딕", "돋움";
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+address {
+    font-style: normal;
+}
+
+.hide {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
