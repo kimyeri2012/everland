@@ -67,7 +67,6 @@ include "inc/session.php";
                         <li><a href="">운휴안내</a></li>
                         <li><a href="">교통정보</a></li>
                         <li><a href="">편의시설</a></li>
-                        <li><a href="">가이드맵</a></li>
                         <li><a href="">모바일앱</a></li>
                     </ul>
                 </li>
@@ -76,7 +75,6 @@ include "inc/session.php";
                         <li><a href="">이용요금</a></li>
                         <li><a href="">제휴카드</a></li>
                         <li><a href="">스페셜 프로모션</a></li>
-                        <li><a href="">드림투어</a></li>
                         <li><a href="">체험 프로그램</a></li>
                     </ul>
                 </li>
