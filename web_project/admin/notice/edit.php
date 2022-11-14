@@ -6,9 +6,43 @@ include "../inc/session.php";
 $n_idx = $_GET["n_idx"];
 $n_title = $_POST["n_title"];
 $n_content = $_POST["n_content"];
-
-// 작성일자
 $w_date = date("Y-m-d");
+
+//파일 업로드
+if($_FILES["up_file"]["size"]>0){ //파일이 있다면
+    $tmp_name = $_FILES["up_file"]["tmp_name"];
+    $f_name = $_FILES["up_file"]["name"];
+    $up= move_uploaded_file($tmp_name, "../../data/$f_name");
+
+    $f_type = $_FILES["up_file"]["type"];
+    $f_size = $_FILES["up_file"]["size"];
+
+    // 작성일자
+
+    // 쿼리 작성
+    $sql = "update notice set ";
+    $sql .= "n_title='$n_title',";
+    $sql .= "n_content='$n_content',";
+    $sql .= "w_date='$w_date',";
+    $sql .= "f_name='$f_name',";
+    $sql .= "f_type='$f_type',";
+    $sql .= "f_size='$f_size' ";
+    $sql .= "where idx=$n_idx;";
+    echo $sql;
+    exit; 
+}else{
+
+    // 쿼리 작성
+    $sql = "update notice set ";
+    $sql .= "n_title='$n_title',";
+    $sql .= "n_content='$n_content',";
+    $sql .= "w_date ='$w_date' ";
+    $sql .= "where idx=$n_idx;";
+    echo $sql;
+    exit; 
+
+}
+
 
 // 값 확인
 /* echo "<p> idx : ".$n_idx."</p>";
@@ -21,11 +55,11 @@ exit; */
 include "../inc/dbcon.php";
 
 // 쿼리 작성
-$sql = "update notice set ";
-$sql .= "n_title='$n_title',";
-$sql .= "n_content='$n_content',";
-$sql .= "w_date='$w_date' ";
-$sql .= "where idx=$n_idx;";
+// $sql = "update notice set ";
+// $sql .= "n_title='$n_title',";
+// $sql .= "n_content='$n_content',";
+// $sql .= "w_date='$w_date' ";
+// $sql .= "where idx=$n_idx;";
 /* echo $sql;
 exit; */
 

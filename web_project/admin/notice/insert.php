@@ -32,14 +32,14 @@ include "../inc/dbcon.php";
 
 // 쿼리 작성
 $sql = "insert into notice(";
-$sql .= "n_title, n_content, writer, w_date";
+$sql .= "n_title, n_content, writer, w_date, ";
 $sql .= "f_name, f_type, f_size";
 $sql .= ") values(";
-$sql .= "'$n_title', '$n_content', '$s_name', '$w_date'";
+$sql .= "'$n_title', '$n_content', '$s_name', '$w_date',";
 $sql .= "'$f_name', '$f_type', '$f_size'";
 $sql .= ");";
-echo $sql;
-exit; 
+// echo $sql;
+// exit; 
 
 // 데이터베이스에 쿼리 전송
 mysqli_query($dbcon, $sql);

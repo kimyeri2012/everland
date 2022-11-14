@@ -53,7 +53,7 @@ mysqli_close($dbcon);
 </head>
 <body>
     <?php include "../inc/sub_header.html"; ?>
-    <form name="notice_form" action="edit.php?n_idx=<?php echo $n_idx; ?>" method="post" onsubmit="return notice_check()">
+    <form name="notice_form" action="edit.php?n_idx=<?php echo $n_idx; ?>" method="post" enctype="multipart/form-data" onsubmit="return notice_check()">
         <fieldset>
             <legend>공지사항</legend>
             <p>
@@ -69,6 +69,10 @@ mysqli_close($dbcon);
             <p>
                 <label for="n_content">내용</label>
                 <textarea cols="60" rows="10" name="n_content" id="n_content"><?php echo $array["n_content"]; ?></textarea>
+            </p>
+            <p>
+                <label for="up_file">첨부파일[<?php echo $array["f_name"]; ?>]</label>
+                <input type="file" name="up_file" id="up_file">
             </p>
 
             <p>

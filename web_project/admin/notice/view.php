@@ -101,6 +101,17 @@ mysqli_query($dbcon, $sql);
         <tr class="notice_view_text">
             <td colspan="2" class="v_text">
             <?php 
+            if($array["f_name"]&& substr($array["f_type"], 0, 5) == "image"){
+                $f_name = $array["f_name"];
+                echo "
+                    <img src = \"../../data/$f_name\" alt = \"\">
+                ";
+
+            }
+            ?>
+            <?php
+
+
             // textarea의 엔터를 br로 변경
             // str_repalce("어떤 문자를", "어떤 문자로", "어떤 값에서");
             $n_content = str_replace("\n", "<br>", $array["n_content"]);
@@ -108,6 +119,17 @@ mysqli_query($dbcon, $sql);
             echo $n_content; 
             ?>
             </td>
+        </tr>
+        <tr class="notice_view_content">
+            <th class="v_title">첨부파일</th>
+            <td class="v_content">
+                <a href="../../data/<?php echo $array["f_name"]; ?>" download=" = "<?php echo $array["f_name"];?>>
+                <?php echo $array["f_name"];?>
+                </a>
+            </td>
+
+
+
         </tr>
     </table>
     <p class="list">
