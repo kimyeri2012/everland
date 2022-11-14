@@ -8,7 +8,7 @@ $pwd = $_POST["pwd"];
 // echo $u_id." / ".$pwd;
 
 // DB 연결
-include "../../inc/dbcon.php";
+include "../inc/dbcon.php";
 
 // 쿼리 작성
 // select u_id, pwd from members where u_id='$u_id';

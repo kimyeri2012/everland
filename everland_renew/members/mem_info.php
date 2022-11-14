@@ -32,76 +32,24 @@ include "../inc/session.php";
 
         })
     </script>
-    <style type="text/css">
-        /* input:focus{border: 5px solid red;outline:0 none; background: #333;color: white;}; */
-        .err_txt{font-size: 14px; color: red;}
-        .dsp_txt{font-size: 16px;}
-        /* .c_line{
-            width: 500px;
-            height: 50px;
-        } */
 
-    </style>
     <script type="text/javascript">
 
         //이름입력x-> 이름 입력안내 메시지, 커서 표시
         function join_form_check(){
-            var u_name = document.getElementById("u_name");
-            var u_id = document.getElementById("u_id");
             var pwd = document.getElementById("pwd");
             var re_pwd = document.getElementById("re_pwd");
             var mobile = document.getElementById("mobile");
-            var apply = document.getElementById("apply");
 
-            if(u_name.value == ""){
-                alert("이름을 입력하세요");
-                //입력안내 메시지 출력
-                var txt = document.getElementById("err_name");
-                txt.innerHTML="<em>이름을 입력하세요</em>" //방법1 html 사용 가능 ex)<em><i><p>등등 사용 가능
-                // txt.textContent="이름을 입력하세요" // 방법2 텍스트만 가능 ex)<em><i><p>등등 사용 불가 
-                //커서 
-                u_name.focus();
-                return false; // 현페이지 머물기
-            }
-            if(u_id.value == ""){
-                alert("아이디를 입력하세요");
-                var txt = document.getElementById("err_id");
-                txt.innerHTML="<em>아이디을 입력하세요</em>" 
-                u_id.focus();
-                return false; 
-            }
-            var id_len = u_id.value.length;
-
-            if(id_len < 4 || id_len > 12){
-                alert("아이디를 입력하세요");
-                var txt = document.getElementById("err_id");
-                txt.textContent="아이디는 4~12글자만 입력할 수 있습니다." 
-                u_id.focus();
-                return false; 
-            }
-            if(pwd.value == ""){
-                alert("비밀번호를 입력하세요");
-                var txt = document.getElementById("err_pwd");
-                txt.innerHTML="<em>비밀번호을 입력하세요</em>" 
-                pwd.focus();
-                return false; 
-            }
             var pwd_len = pwd.value.length;
 
             if(pwd_len < 4 || pwd_len > 12){
-                alert("비밀번호를 입력하세요");
                 var txt = document.getElementById("err_pwd");
                 txt.textContent="* 비밀번호는 4~8글자만 입력할 수 있습니다." 
                 pwd.focus();
                 return false; 
             }
-            if(re_pwd.value == ""){
-                alert("비밀번호 확인을 입력하세요");
-                var txt = document.getElementById("err_re_pwd");
-                txt.innerHTML="<em>비밀번호 확인을 입력하세요</em>" 
-                re_pwd.focus();
-                return false; 
-            }
+
             var pwd_con = re_pwd.value;
 
             if(pwd.value!=pwd_con){
@@ -110,33 +58,12 @@ include "../inc/session.php";
                 re_pwd.focus();
                 return false; 
             }
-            if(mobile.value == ""){
-                alert("전화번호를 입력하세요");
-                var txt = document.getElementById("err_num");
-                txt.innerHTML="<em>전화번호를 입력하세요</em>" 
-                mobile.focus();
-                return false;
-            }
+
             var reg = /^[0-9]+$/g;
             if(!reg.test(mobile.value)){
                 var txt = document.getElementById("err_num");
                 txt.innerHTML="전화번호는 숫자만 입력할 수 있습니다." 
                 mobile.focus();
-                return false; 
-            }
-            if(apply.value != "y"){
-                alert("약관동의를 눌러주세요");
-                var txt = document.getElementById("err_apply");
-                txt.innerHTML="<em>약관동의를 눌러주세요</em>" 
-                return false; 
-            }
-            //정규식으로 숫자인지 검사
-            //변수 = /패턴(규칙)/플래그(옵션)
-            // 변수.메소드();
-            if(!apply.checked){
-                var txt = document.getElementById("err_apply");
-                txt.textContent = "약관 동의가 필요합니다.";
-                apply.focus();
                 return false; 
             }
 
@@ -156,9 +83,9 @@ include "../inc/session.php";
         function login_search(){
             window.open("login_search.html", "", "width=600,height=300,left=0,top=0")
         }
-        function addr_search(){
-            window.open("addr_search.html", "", "width=600,height=300,left=0,top=0")
-        }
+        // function addr_search(){
+        //     window.open("addr_search.html", "", "width=600,height=300,left=0,top=0")
+        // }
         
     </script>
 </head>

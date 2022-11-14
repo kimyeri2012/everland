@@ -1,16 +1,13 @@
 <?php
-// 데이터 가져오기
-$n_idx = $_GET["n_idx"];
-
-// 데이터 가져오기 - 세션 활용
-// include "../inc/session.php";
+// 데이터 가져오기 - get 방식 활용, 페이지 경로에 데이터 포함
+$g_idx = $_GET["g_idx"];
 
 // DB 연결
 include "../inc/dbcon.php";
 
 // 쿼리 작성
 // delete from 테이블명 where 필드명='값';
-$sql = "delete from notice where idx=$n_idx;";
+$sql = "delete from members where idx=$g_idx;";
 
 // 쿼리 전송
 mysqli_query($dbcon, $sql);

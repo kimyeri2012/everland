@@ -1,13 +1,13 @@
 /* header */
 .header{
     width: auto;
-    height:110px;
+    height:140px;
     /* border-top:1px solid #fff; */
     border-bottom:1px solid #cbcbcb;
     z-index: 9999;
     position: sticky;
     /* padding-top: 22px; */
-    top: -26px;
+    top: -50px;
     background-color: white;
 }
 
@@ -15,7 +15,7 @@
 .logo{
     width:160px;
     height:66px;
-    margin:30px 0 15px 60px;
+    margin:56px 0 15px 60px;
     float: left;
 }
 .logo a {
@@ -28,142 +28,114 @@
 
 /* ----------------------------------------------------gnb */
 .gnb{
-    padding-top:26px ;
+    padding-top:40px ;
     z-index: 9999;
+    background-color: #f7f7f7;
+    border: 1px solid #f1f1f1;
+
 }
-/* .gnb >ul{
-    width: 1200px;
-    height: 40px;
-    margin: auto;
-} */
+
 .gnb_1 > a{
     font-weight:bold;
 }
 
-.gnb>ul>li{font-size:18px;font:"나눔고딕";float: left;width: 170px;height: 40px;line-height: 30px;text-align: center;position: relative;}
+/* .gnb>ul>li{font-size:18px;font:"나눔고딕";float: left;width: 170px;height: 40px;line-height: 30px;text-align: center;position: relative;}
 .gnb>ul>li>a{ padding-top:30px ; display:block; height: 44px;}
-.gnb ul ul{z-index: 9999;width: 100%; position: absolute; left: 0px;top: 84px;border:1px solid #cbcbcb;background: white; }
+.gnb ul ul{z-index: 9999;width: 100%; position: absolute; left: 0px;top: 80px;border:1px solid #cbcbcb;background: white; } */
+.gnb>ul>li{font-size:18px;font:"나눔고딕";float: left;width: 170px;height: 40px;line-height: 30px;text-align: center;position: relative;}
+.gnb>ul>li>a{ padding-top:40px ; display:block; height: 44px;}
+.gnb ul ul{z-index: 9999;width: 100%; position: absolute; left: 0px;top: 100px;border:1px solid #cbcbcb;background: white; }
 
 /* -----------------------fm---------- */
 .fm{
-    /* width: 400px; */
+    width: 320px;
     height: 83px;
     margin:auto;
     position: relative;
-}
-.fm{
+    font-size: 14px;
     position:absolute;
     right: 60px;
-    top: 34px;
+    top: 56px;
 }
-.fm_search{
-    float: left;
-    margin-right:16px;
-}
+
 
 .fm_search a{
-    display: block;
-    width: 50px;
-    height: 83px;
-    background: url(../images/fast1_1.png)no-repeat;
-    position: relative;
-}
-.fm_search span{
-    position: absolute;
-    top: 50px;
-    left:2px;
-}
-
-.fm_smart{
+    width: 80px;
+    height: 30px;
     float: left;
-    margin-right:16px
-    
+    display: block;
+    background: url(../images/fast1_1.png)no-repeat;
+    background-position: 24px 2px;
+    padding-top: 54px;
+    text-align: center;
 }
 
 .fm_smart a{
+    width: 80px;
+    height: 30px;
+    float: left;
     display: block;
-    width: 76px;
-    height: 83px;
     background: url(../images/fast1_2.png)no-repeat;
-    position: relative;
+    background-position: 14px 4px;
+    padding-top: 54px;
+    text-align: center;
 }
-.fm_smart span{
-    position: absolute;
-    top: 50px;
-    left: -10px
-}
-
-.fm_stu{
-    float: left;
-    margin-right:14px
-}
-
 .fm_stu a{
-    display: block;
-    width: 65px;
-    height: 83px;
-    background: url(../images/fast1_3.png)no-repeat;
-    position: relative;
-    
-}
-.fm_stu span{
-    position: absolute;
-    top: 50px;
-    left: -10px
-}
-
-.fm_entr{
+    width: 80px;
+    height: 30px;
     float: left;
-}
-
-.fm_entr a{
     display: block;
-    width: 62px;
-    height: 83px;
+    background: url(../images/fast1_3.png)no-repeat;
+    background-position: 20px 4px;
+    padding-top: 54px;
+    text-align: center;
+}
+.fm_entr a{
+    width: 80px;
+    height: 30px;
+    float: left;
+    display: block;
     background: url(../images/fast1_4.png)no-repeat;
-    position: relative;
+    background-position: 20px 4px;
+    padding-top: 54px;
+    text-align: center;
 }
-.fm_entr span{
-    position: absolute;
-    top: 50px;
-    left: -8px
-}
-
-
 
 /* ----------------user_mu */
 .user_mu{
+    width: 396px;
     font-size: 14px;
-    height: 18px;
+    height: 38px;
     position: absolute;
-    top: 4px;
+    top: 10px;
     right: 64px;
     /* background-color: #00f; */
 }
+.pnt_name{
+    float: right;
+}
+.user_mu span{
+    margin-right:20px;
+}
 
 .user_log{
-    float: left;
+    float: right;
 }
 .user_log:after{
     content:"|";
     margin:10px;
 }
 .user_join{
-    float: left;
+    float: right;
 }
 .user_join:after{
     content:"|";
     margin:10px;
 }
-.user_cos{
-    float: left;
-}
-.user_cos:after{
-    content:"|";
-    margin:10px;
-}
+
 .user_lang{
-    float: left;
+    float: right;
+    
 }
 /* -----------------main */
 .att{

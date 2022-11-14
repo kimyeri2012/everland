@@ -54,13 +54,11 @@ mysqli_query($dbcon, $sql);
 
         a:hover{color:rgb(255, 128, 0)}
 
-        <?php if($s_id == "admin"){ ?>
         .write_area{
             width:860px;
             display:flex;
             flex-direction:row-reverse
         }
-        <?php }; ?>
     </style>
     <script>
         function remove_notice(){
@@ -75,11 +73,9 @@ mysqli_query($dbcon, $sql);
     <?php include "../inc/sub_header.html"; ?>
     <!-- 콘텐트 -->
     <h2>공지사항</h2>
-    <?php if($s_id == "admin"){ ?>
     <p class="write_area">
         <span><a href="write.php">[글쓰기]</a></span>
     </p>
-    <?php }; ?>
     <table class="notice_list_set">
         <tr class="notice_list_title">
             <th class="v_title">제목</th>
@@ -116,10 +112,8 @@ mysqli_query($dbcon, $sql);
     </table>
     <p class="list">
         <a href="list.php">[목록]</a>
-        <?php if($s_id == "admin"){ ?>
         <a href="modify.php?n_idx=<?php echo $n_idx; ?>">[수정]</a>
         <a href="#" onclick="remove_notice()">[삭제]</a>
-        <?php }; ?>
     </p>
 </body>
 </html>

@@ -69,9 +69,10 @@
             var g_txt = email_sel.options[idx].value;
             email_dns.value = g_txt;
         };
+
         function id_search(){
-            window.open("id_search.php", "idsch", "width=600, height=300");
-        }
+            window.open("id_search.php", "idsch",  "width=600, height=300");
+        };
     </script>
 </head>
 <body>

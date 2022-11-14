@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
-    <style type="text/css">
+    <style>
         body,input,button,select,option{font-size:20px}
         input[type=checkbox]{width:20px;height:20px}
         input[type=radio]{width:20px;height:20px}
-        .blueText{color:rgb(40, 92, 188)}
-        .redText{color:red}
+        .blueText{font-weight:bold;color:rgb(40, 92, 188)}
+        .redText{font-weight:bold;color:rgb(251, 77, 14)}
     </style>
     <script>
         function join_form_check(){
@@ -71,18 +71,20 @@
             var g_txt = email_sel.options[idx].value;
             email_dns.value = g_txt;
         };
-//------------------------비동기식으로 아이디 중복 검사//제이쿼리로도 가능 //자바스크립트 async() 가능
 
+        // 비동시식으로 아이디 중복 검사
         function getCont( g_id ){
             var dsp  = document.getElementById('dsp');
             
             if(g_id.length < 4 || g_id.length > 12){
-                dsp.innerHTML = '아이디는 4~12글자만 입력할 수 있습니다..';
+                dsp.innerHTML = '아이디는 4~12글자만 입력할 수 있습니다.';
                 dsp.className = 'redText';
             } else{
                 var xmlhttp = fncGetXMLHttpRequest();
 
                 // 아이디를 체크할 php 페이지에 체크 하려하는 id 값을 파라미터로 전송
+                // alert('id_check_ajax.php?u_id='+g_id);
+                // return false;
                 xmlhttp.open('GET', 'id_check_ajax.php?u_id='+g_id, false);
 
                 xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded; charset=UTF-8');
@@ -92,13 +94,13 @@
                         if( xmlhttp.status==500 || xmlhttp.status==404 || xmlhttp.status==403 )
                             alert( xmlhttp.status );
                         else{
-                            var txt= xmlhttp.responseText;
-                            txt = txt.replace(/\n/g,"");//행바꿈
-                            txt = txt.replace(/\r/g,"");//엔터값 제거
-                            txt = txt.replace(/\s+/g,"");//왼쪽 공백 제거
-                            txt = txt.replace(/\s+$/g,"");//오른쪽 공백 제거
+                            var txt = xmlhttp.responseText;
+                            txt = txt.replace(/\n/g, ""); // 행바꿈 제거
+                            txt = txt.replace(/\r/g, ""); // 엔터값 제거
+                            txt = txt.replace(/\s+/, ""); // 왼쪽 공백 제거
+                            txt = txt.replace(/\s+$/g, ""); // 오른쪽 공백 제거
+                            // alert("페이지에 입력된 값 : " + g_id + "\r처리 페이지에서 반환된 값 : " + txt);
 
-                            // alert("페이지에서 입력된 값: "+g_id+"\r처리 페이지에서 반환된 값: "+txt);
                             if(txt=='Y') {
                                 dsp.innerHTML = '이미 가입된 아이디입니다.';
                                 dsp.className = 'redText';
@@ -106,14 +108,13 @@
                                 dsp.innerHTML = '사용할 수 있는 아이디입니다.';
                                 dsp.className = 'blueText';
                             }
-
                         }
                     }
                 }
             }
             xmlhttp.send();
         }
-//-----------------호환성 검사
+
         function fncGetXMLHttpRequest(){
             if (window.ActiveXObject){
                 try{
@@ -132,16 +133,6 @@
                 return null;
             }
         }
-        // function key_up_test(txt){
-        //     var dsp = document.getElementById("dsp");
-        //     // dsp.innerHTML = txt;
-        //     if(txt==1){
-        //         dsp.innerHTML = "aaaaa";
-        //     }else{
-        //         dsp.innerHTML = "bbbb";
-        //     }
-            
-        // }
     </script>
 </head>
 <body>
@@ -156,7 +147,6 @@
             <p>
                 <label for="u_id">아이디</label>
                 <input type="text" name="u_id" id="u_id" onkeyup="getCont(this.value)">
-                <!-- <button type="button" onclick="id_search()">아이디 중복 확인</button> -->
                 <br>* 아이디는 4~12글자만 입력할 수 있습니다.
                 <br><span id="dsp"></span>
             </p>

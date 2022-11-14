@@ -1,6 +1,6 @@
 <?php 
 include "../inc/session.php"; 
-include "../inc/admin_check.php";
+include "../inc/login_check.php";
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -35,14 +35,13 @@ include "../inc/admin_check.php";
 </head>
 <body>
     <?php include "../inc/sub_header.html"; ?>
-    <form name="notice_form" action="insert.php" method="post"  onsubmit="return notice_check()">
+    <form name="notice_form" action="insert.php" method="post" enctype="multipart/form-data" onsubmit="return notice_check()">
         <fieldset>
             <legend>공지사항</legend>
             <p>
                 작성자 <?php echo $s_name; ?>
                 <!-- <input type="hidden"> -->
             </p>
-
 
             <p>
                 <label for="n_title">제목</label>
@@ -52,6 +51,10 @@ include "../inc/admin_check.php";
             <p>
                 <label for="n_content">내용</label>
                 <textarea cols="60" rows="10" name="n_content" id="n_content"></textarea>
+            </p>
+            <p>
+                <label for="up_file">파일 업로드</label>
+                <input type="file" name="up_file" id="up_file">
             </p>
 
             <p>

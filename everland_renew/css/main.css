@@ -28,8 +28,11 @@
 
 /* ----------------------------------------------------gnb */
 .gnb{
-    padding-top:50px ;
+    padding-top:40px ;
     z-index: 9999;
+    background-color: #f7f7f7;
+    border: 1px solid #f1f1f1;
+
 }
 
 .gnb_1 > a{
@@ -40,8 +43,8 @@
 .gnb>ul>li>a{ padding-top:30px ; display:block; height: 44px;}
 .gnb ul ul{z-index: 9999;width: 100%; position: absolute; left: 0px;top: 80px;border:1px solid #cbcbcb;background: white; } */
 .gnb>ul>li{font-size:18px;font:"나눔고딕";float: left;width: 170px;height: 40px;line-height: 30px;text-align: center;position: relative;}
-.gnb>ul>li>a{ padding-top:30px ; display:block; height: 44px;}
-.gnb ul ul{z-index: 9999;width: 100%; position: absolute; left: 0px;top: 90px;border:1px solid #cbcbcb;background: white; }
+.gnb>ul>li>a{ padding-top:40px ; display:block; height: 44px;}
+.gnb ul ul{z-index: 9999;width: 100%; position: absolute; left: 0px;top: 100px;border:1px solid #cbcbcb;background: white; }
 
 /* -----------------------fm---------- */
 .fm{
@@ -104,7 +107,7 @@
     font-size: 14px;
     height: 38px;
     position: absolute;
-    top: 14px;
+    top: 10px;
     right: 64px;
     /* background-color: #00f; */
 }
@@ -249,10 +252,9 @@
     position: relative;
 }
 .att_wrap{
-    width: 980px;
+    width: 1000px;
     height: 234px;
     margin-top: 80px;
-    margin-left: 30px;
 }
 .att h2{
     text-align: center;
@@ -282,12 +284,12 @@
     margin-top:16px;
     color: red;
 }  */
+
 .att_Tex >li >a {
     width: 156px;
     height: 234px;
     background: url(../images/att_Tex.jpg)no-repeat;
-    background-position: 0px 0px;
-    float: left;
+    margin: auto;
     padding-top: 176px;
     box-sizing: border-box;
     text-align: center;
@@ -296,7 +298,7 @@
     display: block;
 }
 .att_Tex span{
-    width: 156px;
+    width: 200px;
     height: 30px;
     font-size:14px;
     font-weight: normal;
@@ -317,7 +319,7 @@
     width: 156px;
     height: 234px;
     background: url(../images/att_amaz.jpg)no-repeat;
-    background-position: 0px 0px;
+    margin: auto;
     /* margin-right: 58px; */
     /* margin-left: 90px; */
     padding-top: 176px;
@@ -328,7 +330,7 @@
     display: block;
 }
 .att_amaz span{
-    width: 156px;
+    width: 200px;
     height: 30px;
     font-size:14px;
     font-weight: normal;
@@ -353,7 +355,7 @@
     width: 156px;
     height: 234px;
     background: url(../images/att_sfari.jpg)no-repeat;
-    background-position: 0px 0px;
+    margin: auto;
     /* margin-right: 58px; */
     /* margin-left: 90px; */
     padding-top: 176px;
@@ -364,7 +366,7 @@
     display: block;
 }
 .att_sfari span{
-    width: 156px;
+    width: 200px;
     height: 30px;
     font-size:14px;
     font-weight: normal;
@@ -382,10 +384,10 @@
 } 
 
 .att_biking >li >a {
-    width: 170px;
+    width: 156px;
     height: 234px;
     background: url(../images/att_biking.jpg)no-repeat;
-    background-position: 0px 0px;
+    margin: auto;
     /* margin-right: 58px; */
     /* margin-left: 90px; */
     padding-top: 176px;
@@ -396,7 +398,7 @@
     display: block;
 }
 .att_biking span{
-    width: 156px;
+    width: 200px;
     height: 30px;
     font-size:14px;
     font-weight: normal;
@@ -415,9 +417,10 @@
 
 
 .att_bump >li >a {
-    width: 170px;
+    width: 156px;
     height: 234px;
     background: url(../images/att_bump.jpg)no-repeat;
+    margin: auto;
     /* margin-right: 58px; */
     /* margin-left: 90px; */
     padding-top: 176px;
@@ -428,7 +431,7 @@
     display: block;
 }
 .att_bump span{
-    width: 156px;
+    width: 200px;
     height: 30px;
     font-size:14px;
     font-weight: normal;
@@ -503,7 +506,7 @@
     text-indent: -9999px;
     border:none;
     position: absolute;
-    left:-110px;
+    left:-90px;
     top: 80px;
     z-index: 9999px;
     
@@ -517,7 +520,7 @@
     text-indent: -9999px;
     border: none;   
     position: absolute;
-    right:-70px;
+    right:-90px;
     top: 80px;
     z-index: 9999px;
 }

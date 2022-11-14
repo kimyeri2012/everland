@@ -1,0 +1,36 @@
+drop table if exists new_members;
+create table new_members(
+    idx int auto_increment primary key,
+    u_name varchar(20) not null,
+    u_id varchar(20) not null,
+    pwd varchar(20) not null,
+    phone_no varchar(15),
+    email varchar(50),
+    birth date,
+    gender char(1),
+    addr varchar(100)
+);
+
+insert into new_members values(1, '관리자', 'admin', '1234', '01011112222', 'admin@abc.com', '2001-10-25', '남', '서울시 강남구 역삼동');
+insert into new_members(u_name, u_id, pwd) values('홍길동', 'hong', '1111');
+
+insert into members(u_name, u_id, pwd, mobile, birth, email, ps_code, addr_b, addr_d, gender, reg_date) values('김정우', 'Zungwoo', '1277', '01012712712', '1998-02-19', 'woo127@naver.com', '12345', '경기도 군포시', '산본동', '남', '2022-11-04');
+insert into members(u_name, u_id, pwd, mobile, birth, email, ps_code, addr_b, addr_d, gender, reg_date) values('김태연', 'taeyeon', 'ty1234', '01012340147', '1989-03-09', 'taeyeon01@naver.com', '12345', '전라북도 전주시', '평화동', '여' ,'2022-11-04');
+insert into members(u_name, u_id, pwd, mobile, birth, email, ps_code, addr_b, addr_d, gender, reg_date) values('리누스', 'Linux', '1q2w3e', '01025559999', '1971-08-25', 'linux@github.com', '12345', '부산광역시 해운대구', '123', '남', '2022-11-04');
+insert into members(u_name, u_id, pwd, mobile, birth, email, ps_code, addr_b, addr_d, gender, reg_date) values('박보영', 'parkbo0123', 'park6789!', '01056567878', '1986-05-05', 'parkbo0123@naver.com', '12345', '경기 성남시', '분당구', '여', '2022-11-04');
+insert into members(u_name, u_id, pwd, mobile, birth, email, ps_code, addr_b, addr_d, gender, reg_date) values('박주원', 'joowon', '5678', '01062515564', '1991-12-06', 'peter@i-on.net', '12345', '세종시', '567', '남', '2022-11-04');
+insert into members(u_name, u_id, pwd, mobile, birth, email, ps_code, addr_b, addr_d, gender, reg_date) values('예지', 'dbekcks', '1026', '01012345678', '2000-05-26', 'dbekcks@naver.com', '12345', '서울특별시 성동구', '성수동', '여', '2022-11-04');
+insert into members(u_name, u_id, pwd, mobile, birth, email, ps_code, addr_b, addr_d, gender, reg_date) values('이유리', 'glasslee', '7253', '01022357709', '1996-07-14', 'glass22@naver.com', '12345', '서울특별시 성동구', '서울숲2길 17-17 (성수동1가)', '여', '2022-11-04');
+insert into members(u_name, u_id, pwd, mobile, birth, email, ps_code, addr_b, addr_d, gender, reg_date) values('이지은', 'iuiu', '5252', '01012341234', '1993-05-16', 'iiuu@naver.com', '12345', '경기도 광주군', '광주읍 송정리', '여', '2022-11-04');
+insert into members(u_name, u_id, pwd, mobile, birth, email, ps_code, addr_b, addr_d, gender, reg_date) values('공원식', 'arrrrr', 'wwt2d2', '01067969679', '1994-10-14', 'arrrrr@naver.com', '12345', '서울시 강남구', '역삼동', '남', '2022-11-04');
+insert into members(u_name, u_id, pwd, mobile, birth, email, ps_code, addr_b, addr_d, gender, reg_date) values('김길동', 'kildong1004', 'kildong1004!', '01056567979', '1961-01-03', 'kildong1004@gmail.com', '12345', '서울시 서대문구', '서대문로 1가 1층 파란지붕집', '남', '2022-11-04');
+insert into members(u_name, u_id, pwd, mobile, birth, email, ps_code, addr_b, addr_d, gender, reg_date) values('기성용', 'kiki6', '1234', '01012341234', '1990-06-06', 'ki6@naver.com', '12345', '서울시 강남구', '서초동', '남', '2022-11-04');
+insert into members(u_name, u_id, pwd, mobile, birth, email, ps_code, addr_b, addr_d, gender, reg_date) values('anomalie', 'anomalie1', '1234', '01056785678', '1993-10-24', 'anomalie@google.co.kr', '12345', '서울특별시 마포구', '연남동', '남', '2022-11-04');
+insert into members(u_name, u_id, pwd, mobile, birth, email, ps_code, addr_b, addr_d, gender, reg_date) values('바나나킥', 'banana', '5662', '01057023342', '1995-04-20', 'banana@naver.com', '12345', '성남시 분당구', '백현동', '여', '2022-11-04');
+insert into members(u_name, u_id, pwd, mobile, birth, email, ps_code, addr_b, addr_d, gender, reg_date) values('황민현', 'optimushwang', '0809', '01088889999', '1995-08-09', 'optimushwang@gmail.com', '12345', '부산광역시 수영구', '567', '남', '2022-11-04');
+insert into members(u_name, u_id, pwd, mobile, birth, email, ps_code, addr_b, addr_d, gender, reg_date) values('김강남', 'gangnam', 'gangnam123', '01076546543', '1999-09-09', 'gangnam@naver.com', '12345', '서울특별시 강남구', '대치동', '남', '2022-11-04');
+insert into members(u_name, u_id, pwd, mobile, birth, email, ps_code, addr_b, addr_d, gender, reg_date) values('김범준', 'abcabc', '123123', '01012345678', '2022-10-25', 'abc123@gmail.com', '12345', '서울시 강남구', '개포동', '남', '2022-11-04');
+insert into members(u_name, u_id, pwd, mobile, birth, email, ps_code, addr_b, addr_d, gender, reg_date) values('김연아', 'yunakim', '221022', '01020140221', '1990-09-05', 'yunakim@gmail.com', '12345', '서울시 용산구', '한남동', '여', '2022-11-04');
+insert into members(u_name, u_id, pwd, mobile, birth, email, ps_code, addr_b, addr_d, gender, reg_date) values('둘리', 'dool2', 'd2d2!@', '025727896', '1983-04-25', 'dool2@gmail.com', '12345', '부천시 원미구', '상1동 412-3번지 둘리의 거리', '남', '2022-11-04');
+insert into members(u_name, u_id, pwd, mobile, birth, email, ps_code, addr_b, addr_d, gender, reg_date) values('이종성', 'ljs111', '1234', '01012345678', '1984-12-12', 'abc@def.com', '12345', '서울 강남구', '강남대로 428 만이빌딩 5층', '남', '2022-11-04');
+

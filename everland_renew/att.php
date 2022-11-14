@@ -1,3 +1,7 @@
+<?php
+include "inc/session.php";
+ 
+?>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -12,22 +16,27 @@
     <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css"/>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="slick-1.8.1/slick/slick.js"></script>
+
     <script type="text/javascript">
         $(document).ready(function () {
-            $(".gnb>ul>li,nav_bg").mouseenter(function () {
+            $(".gnb_1 >ul").hide();
+
+            $(".gnb>ul>li").mouseover(function () {
                 $(this).find("ul").stop().slideDown("fast");
             })
-            $(".gnb>ul>li").mouseleave(function () {
+            $(".gnb>ul>li").mouseout(function () {
                 $(this).find("ul").stop().slideUp("fast");
             })
-
+            // $(".gnb>ul>li").hover(function() {
+            //     $(this).find("ul").stop().slideToggle("fast")
+            // })
         })
     </script>
 </head>
 
 <body>
-    <header id="header" class="header">
-        <h1 class="logo"><a href="#">에버랜드</a></h1>
+<header id="header" class="header">
+        <h1 class="logo"><a href="index.php">에버랜드</a></h1>
 
         <nav class="gnb">
             <h2 class="hide">주요 메뉴</h2>
@@ -43,7 +52,7 @@
                         <li><a href="">가이드맵</a></li>
                         <li><a href="">모바일앱</a></li>
                     </ul>
-            </li>
+                </li>
                 <li class="gnb_1"><a href="#">요금&프로모션</a>
                     <ul>
                         <li><a href="">이용요금</a></li>
@@ -80,7 +89,6 @@
                         <li><a href="">에버랜드 스토리</a></li>
                         <li><a href="">에버랜드 테마뮤직</a></li>
                     </ul>
-                    
                 </li>
             </ul>
         </nav>
@@ -94,8 +102,52 @@
                 <li class="fm_entr"><a href="#"><span>기업단체</span></a></li>
             </ul>
         </div>
+        <?php if(!$s_idx){ ?>
+        <!-- 로그인 전 -->
+        <div class="user_mu">
+            <h2 class="hide">사용자 메뉴 </h2>
+            <ul>
+              <li class="user_lang"><a href="#">언어선택</a></li>
+                <li class="user_join"><a href="members/new_join.php">회원가입</a></li>
+                <li class="user_log"><a href="login/login.php">로그인</a></li>
+                  
+                
+            </ul>
+        </div>
+        <?php } else if($s_idx==1){ ?>
+        <!-- 관리자 로그인 -->
+        <div class="user_mu">
+            <h2 class="hide">사용자 메뉴 </h2>
+            
+            <ul>
+                <li class="user_lang"><a href="#">언어선택</a></li>
+                <li class="user_log"><a href="login/logout.php">로그아웃</a></li>
+                <li class="user_join"><a href="#">마이페이지</a></li>
+            </ul>
+            <span class="pnt_name"><?php echo $s_name; ?>님, 안녕하세요. </span>
+        </div>
+        
+        <!-- <a href="admin/index.php">[관리자 페이지]</a>
+        <a href="login/logout.php">로그아웃</a>
+        <a href="members/mem_info.php">내정보</a> -->
+        
+        <?php }else{ ?>
+        <!-- 로그인 후 -->
 
         <div class="user_mu">
+            <h2 class="hide">사용자 메뉴 </h2>
+            <ul>
+                <li class="user_lang"><a href="#">언어선택</a></li>
+                <li class="user_log"><a href="login/logout.php">로그아웃</a></li>
+                <li class="user_join"><a href="#">마이페이지</a></li>
+            </ul>
+            <span class="pnt_name"><?php echo $s_name; ?>님, 안녕하세요. </span>
+
+        </div>
+
+        <?php }; ?>
+
+        <!-- <div class="user_mu">
             <h2 class="hide">사용자 메뉴 </h2>
             <ul>
                 <li class="user_log"><a href="login/login.php">로그인</a></li>
@@ -103,9 +155,8 @@
                 <li class="user_cos"><a href="#">손님상담센터</a></li>
                 <li class="user_lang"><a href="#">언어선택</a></li>
             </ul>
-        </div>
+        </div> -->
 
-        
         <!-- <div class="group">
             <dl>
                 <dt class="hide">그룹사 홈페이지</dt>

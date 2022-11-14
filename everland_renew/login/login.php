@@ -19,12 +19,19 @@ include "../inc/session.php";
     <script src="/slick-1.8.1/slick/slick.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $(".gnb>ul>li,nav_bg").mouseenter(function () {
+            $(".gnb_1 >ul").hide();
+
+            $(".gnb>ul>li").mouseover(function () {
                 $(this).find("ul").stop().slideDown("fast");
             })
-            $(".gnb>ul>li").mouseleave(function () {
+            $(".gnb>ul>li").mouseout(function () {
                 $(this).find("ul").stop().slideUp("fast");
             })
+            // $(".gnb>ul>li").hover(function() {
+            //     $(this).find("ul").stop().slideToggle("fast")
+            // })
+
+
 
         })
     </script>

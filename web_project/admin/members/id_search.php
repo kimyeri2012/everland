@@ -15,7 +15,7 @@
             <legend>아이디 검색</legend>
             <p>
                 <label for="user_id">입력</label>
-                <input type="text" name="user_id" id="user_id" >
+                <input type="text" name="user_id" id="user_id">
                 <button type="submit">검색</button>
             </p>
         </fieldset>

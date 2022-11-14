@@ -1,0 +1,10 @@
+* xampp My-SQL 실행되지 않을 때
+
+1. 시작 - mysql - My-SQL installer 클릭
+2. 설치창 - remove... 클릭
+3. 전체 선택 후 excute
+4. 삭제 완료 후 remove My-SQL Installer 체크 후 finish
+5. c 드라이브 mysql 폴더 삭제
+
+6. xampp 원본 복사하여 c 드라이브에 덮어쓰기
+7. xampp-controller 패널 열고 My-SQL 실행

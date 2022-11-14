@@ -29,7 +29,7 @@
     </script>
 </head>
 <body>
-    <h2>관리자 로그인</h2>
+    <h2>로그인</h2>
     <form name="login_form" action="login_ok.php" method="post" onsubmit="return login_form_check()">
         <fieldset>
             <legend>로그인</legend>

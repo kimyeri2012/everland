@@ -1,5 +1,4 @@
 <?php
-
 include "inc/session.php";
 ?>
 <!DOCTYPE html>
@@ -12,7 +11,7 @@ include "inc/session.php";
     <style>
         body{font-size:20px}
         .pnt_name{margin-right:15px}
-        p{width:auto;height:300px;background-color: #cdcdcd;}
+        a{text-decoration:none;margin:0 5px}
     </style>
 </head>
 <body>
@@ -33,29 +32,32 @@ include "inc/session.php";
             ";
         }; */
         ?> -->
-        
 
         <?php if(!$s_idx){ ?>
         <!-- 로그인 전 -->
         <a href="login/login.php">로그인</a>
         <a href="members/join.php">회원가입</a> 
-        <?php } else if($s_idx==1){ ?>
+        <?php } else if($s_id == "admin"){ ?>
         <!-- 관리자 로그인 -->
         <span class="pnt_name"><?php echo $s_name; ?>님, 안녕하세요. </span>
         <a href="admin/index.php">[관리자 페이지]</a>
         <a href="login/logout.php">로그아웃</a>
-        <a href="members/mem_info.php">내정보</a>
-        
-        <?php }else{ ?>
+        <a href="members/member_info.php">내 정보</a>
+        <?php } else{ ?>
         <!-- 로그인 후 -->
         <span class="pnt_name"><?php echo $s_name; ?>님, 안녕하세요. </span>
         <a href="login/logout.php">로그아웃</a>
-        <a href="members/mem_info.php">내정보</a>
-        <a href="notice/list.php">공지사항</a>
-
+        <a href="members/member_info.php">내 정보</a>
         <?php }; ?>
     </div>
-
+    <hr>
+    <h1>* 로고 *</h1>
+    <hr>
+    <div class="nav">
+        <a href="./">[홈으로]</a>
+        <a href="notice/list.php">[공지사항]</a>
+    </div>
+    <hr>
     <h2>* 메인 페이지</h2>
     <p>content</p>
 </body>

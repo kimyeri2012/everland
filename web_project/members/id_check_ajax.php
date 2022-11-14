@@ -1,5 +1,5 @@
   <?php
-  $u_id = $_GET['u_id'];
+  $u_id = $_GET["u_id"];
   
   $connect = mysqli_connect("localhost","root","");
   $db_con = mysqli_select_db($connect, "front");
