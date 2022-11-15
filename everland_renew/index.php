@@ -138,7 +138,7 @@ include "inc/session.php";
             <ul>
                 <li class="user_lang"><a href="#">언어선택</a></li>
                 <li class="user_log"><a href="login/logout.php">로그아웃</a></li>
-                <li class="user_join"><a href="#">마이페이지</a></li>
+                <li class="user_join"><a href="members/mypage.php">마이페이지</a></li>
             </ul>
             <span class="pnt_name"><?php echo $s_name; ?>님, 안녕하세요. </span>
         </div>
@@ -155,7 +155,7 @@ include "inc/session.php";
             <ul>
                 <li class="user_lang"><a href="#">언어선택</a></li>
                 <li class="user_log"><a href="login/logout.php">로그아웃</a></li>
-                <li class="user_join"><a href="#">마이페이지</a></li>
+                <li class="user_join"><a href="members/mypage.php">마이페이지</a></li>
             </ul>
             <span class="pnt_name"><?php echo $s_name; ?>님, 안녕하세요. </span>
 
