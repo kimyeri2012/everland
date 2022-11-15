@@ -1,5 +1,27 @@
 <?php
 include "../inc/session.php";
+
+include "../inc/login_check.php";
+
+include "../inc/dbcon.php";
+
+//쿼리 작성
+$sql="select * from members where idx = $s_idx;"; //세션 변수 사용 -> 로그인한 사용자의 모든 데이터
+// echo $sql;
+// exit;
+//쿼리 실행
+$result = mysqli_query($dbcon, $sql);
+
+//DB에서 데이터 가져오기
+// array fetch 사용
+$array = mysqli_fetch_array($result);
+
+
+// mysqli_close($dbcon);
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -10,7 +32,7 @@ include "../inc/session.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
-    <link rel="stylesheet" type="text/css" href="../css/new_join.css">
+    <link rel="stylesheet" type="text/css" href="../css/mem_info.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/slick-1.8.1/slick/slick.css"/>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -176,7 +198,7 @@ include "../inc/session.php";
             
             <ul>
                 <li class="user_lang"><a href="#">언어선택</a></li>
-                <li class="user_log"><a href="login/logout.php">로그아웃</a></li>
+                <li class="user_log"><a href="../login/logout.php">로그아웃</a></li>
                 <li class="user_join"><a href="#">마이페이지</a></li>
             </ul>
             <span class="pnt_name"><?php echo $s_name; ?>님, 안녕하세요. </span>
@@ -193,7 +215,7 @@ include "../inc/session.php";
             <h2 class="hide">사용자 메뉴 </h2>
             <ul>
                 <li class="user_lang"><a href="#">언어선택</a></li>
-                <li class="user_log"><a href="login/logout.php">로그아웃</a></li>
+                <li class="user_log"><a href="../login/logout.php">로그아웃</a></li>
                 <li class="user_join"><a href="#">마이페이지</a></li>
             </ul>
             <span class="pnt_name"><?php echo $s_name; ?>님, 안녕하세요. </span>
@@ -219,22 +241,20 @@ include "../inc/session.php";
                 <dd class="group_2"><a href="#">홈브리지</a></dd>
             </dl>
         </div> -->
-    </header>
+</header>
     <main>
         <form  name="join_form" action="insert.php" method="post" onsubmit="return join_form_check()"> 
             <fieldset>
-                <legend>회원가입</legend>
+                <legend>회원정보 수정</legend>
+                <input type="hidden" name="g_idx" value="<?php echo $array["idx"]; ?>">
                 <div class="u_name">
-                    <label for="u_name" class="c_title">이름</label>
-                    <input type="text" name="u_name" id="u_name" maxlength="10" placeholder="이름을 입력해주세요.">
-                    <br><span id="err_name" class="err_txt"></span>
+                    <p class="c_title">이름</p>
+                    <?php echo $array["u_name"]; ?>
                 </div>
                 <div class="u_id">
-                    <label for="u_id" class="c_title">아이디</label>
-                    <input type="text" name="u_id" id="u_id" placeholder="아이디">
-                    <!-- <button type="button" onclick="login_search()">아이디 중복 확인</button> -->
-                    <!-- <br><span class="dsp_txt">*아이디는 4~12글자만 입력할 수 있습니다.</span> -->
-                    <br><span id="err_id" class="err_txt"></span>
+                    <p class="c_title">아이디</p>
+                    <?php echo $array["u_id"]; ?>
+
                 </div>
                 <div class="u_pwd">
                     <label for="pwd" class="c_title">비밀번호</label>
@@ -249,21 +269,27 @@ include "../inc/session.php";
                 </div>
                 <div class="mobile">
                     <label for="mobile" class="c_title">전화번호</label>
-                    <input type="text" name="mobile" id="mobile">
+                    <input type="text" name="mobile" id="mobile" value="<?php echo $array["mobile"]; ?>">
                     <!-- <br>"-" 없이 숫자만 입력 -->
                     <br><span id="err_num" class="err_txt"></span>
                 </div>
+                <?php
+                    $birth = str_replace("-", "", $array["birth"]);
+                ?>
 
                 <div class="birth">
                     <label for="birth"class="c_title">생년월일</label>
-                    <input type="text" name="birth" id="birth">
+                    <input type="text" name="birth" id="birth" value="<?php echo $birth; ?>">
                     <br>ex) 20221006
                 </div>
+                <?php
+                    $email=explode("@", $array["email"]);               
+                ?>
 
                 <div class="email">
                     <label for="email_id"class="c_title" >이메일</label>
-                    <input type="text" name="email_id" id="email_id" size="12"> @
-                    <input type="text" name="email_dns" id="email_dns" size="12">
+                    <input type="text" name="email_id" id="email_id" size="12" value="<?php echo $email[0];?>"> @
+                    <input type="text" name="email_dns" id="email_dns" size="12" value="<?php echo $email[1];?>">
                     <select name="email_sel" id="email_sel" onchange="change_email()">
                         <option value="">직접입력</option>
                         <option value="naver.com">네이버</option>
@@ -272,24 +298,21 @@ include "../inc/session.php";
                     </select>
                     <br><span id="err_email" class="err_txt"></span>
                 </div>
-
+ 
                 <div class="gender">
-                    <span>성별</span>
-                    <input type="radio" name="gender" id="male" value="m">
-                    <label for="male">남</label>
-                    <input type="radio" name="gender" id="female" value="f">
-                    <label for="female">여</label>
-                </div>
-
-
-                <div class="apply">
-                    <input type="checkbox" name="apply" id="apply" value="y">
-                    <label for="apply">약관동의</label>
-                    <br><span id="err_apply" class="err_txt"></span>
+                    <span class="c_title">성별</span>
+                    <div class="male">
+                        <input type="radio" name="gender" id="male" value="m"<?php if($array["gender"] == "m") echo " checked";?>>
+                        <label for="male">남</label>
+                    </div>
+                    <div class="female">
+                        <input type="radio" name="gender" id="female" value="f" <?php if($array["gender"] == "f") echo " checked";?>>
+                        <label for="female">여</label>
+                    </div>
                 </div>
 
                 <p>
-                    <button type="submit">회원가입</button>
+                    <button type="submit">수정하기</button>
                     <button type="button">돌아가기</button>
                 </p>
             </fieldset>
