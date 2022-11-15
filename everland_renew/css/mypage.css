@@ -1,0 +1,322 @@
+/* header */
+.header{
+    width: auto;
+    height:140px;
+    /* border-top:1px solid #fff; */
+    border-bottom:1px solid #cbcbcb;
+    z-index: 9999;
+    position: sticky;
+    /* padding-top: 22px; */
+    top: -50px;
+    background-color: white;
+}
+ 
+/* logo */
+.logo{
+    width:160px;
+    height:66px;
+    margin:56px 0 15px 60px;
+    float: left;
+}
+.logo a {
+    display: block;
+    width: 120px;
+    height: 66px;
+    background: url(../images/logo3.jpg)no-repeat;
+    text-indent: -9999px;
+}
+
+/* ----------------------------------------------------gnb */
+.gnb{
+    padding-top:40px ;
+    z-index: 9999;
+    background-color: #f7f7f7;
+    border: 1px solid #f1f1f1;
+
+}
+
+.gnb_1 > a{
+    font-weight:bold;
+}
+
+/* .gnb>ul>li{font-size:18px;font:"나눔고딕";float: left;width: 170px;height: 40px;line-height: 30px;text-align: center;position: relative;}
+.gnb>ul>li>a{ padding-top:30px ; display:block; height: 44px;}
+.gnb ul ul{z-index: 9999;width: 100%; position: absolute; left: 0px;top: 80px;border:1px solid #cbcbcb;background: white; } */
+.gnb>ul>li{font-size:18px;font:"나눔고딕";float: left;width: 170px;height: 40px;line-height: 30px;text-align: center;position: relative;}
+.gnb>ul>li>a{ padding-top:40px ; display:block; height: 44px;}
+.gnb ul ul{z-index: 9999;width: 100%; position: absolute; left: 0px;top: 100px;border:1px solid #cbcbcb;background: white; }
+
+/* -----------------------fm---------- */
+.fm{
+    width: 320px;
+    height: 83px;
+    margin:auto;
+    position: relative;
+    font-size: 14px;
+    position:absolute;
+    right: 60px;
+    top: 56px;
+}
+
+
+.fm_search a{
+    width: 80px;
+    height: 30px;
+    float: left;
+    display: block;
+    background: url(../images/fast1_1.png)no-repeat;
+    background-position: 24px 2px;
+    padding-top: 54px;
+    text-align: center;
+}
+
+.fm_smart a{
+    width: 80px;
+    height: 30px;
+    float: left;
+    display: block;
+    background: url(../images/fast1_2.png)no-repeat;
+    background-position: 14px 4px;
+    padding-top: 54px;
+    text-align: center;
+}
+.fm_stu a{
+    width: 80px;
+    height: 30px;
+    float: left;
+    display: block;
+    background: url(../images/fast1_3.png)no-repeat;
+    background-position: 20px 4px;
+    padding-top: 54px;
+    text-align: center;
+}
+.fm_entr a{
+    width: 80px;
+    height: 30px;
+    float: left;
+    display: block;
+    background: url(../images/fast1_4.png)no-repeat;
+    background-position: 20px 4px;
+    padding-top: 54px;
+    text-align: center;
+}
+
+/* ----------------user_mu */
+.user_mu{
+    width: 396px;
+    font-size: 14px;
+    height: 38px;
+    position: absolute;
+    top: 10px;
+    right: 64px;
+    /* background-color: #00f; */
+}
+.pnt_name{
+    float: right;
+}
+.user_mu span{
+    margin-right:20px;
+}
+
+.user_log{
+    float: right;
+}
+.user_log:after{
+    content:"|";
+    margin:10px;
+}
+.user_join{
+    float: right;
+}
+.user_join:after{
+    content:"|";
+    margin:10px;
+}
+
+.user_lang{
+    float: right;
+    
+}
+/* -----------------main */
+form{
+    height: 1600px;
+    margin: auto;
+    /* position: relative; */
+}
+
+fieldset{
+    border: none;
+    /* border: 1px solid red; */
+    width: 500px;
+    margin: auto;
+    /* border: 1px solid blue; */
+}
+legend{
+    padding: 80px 0 30px 0;
+    font-size: 40px;
+    text-align: center;
+}
+label{
+    font-size:18px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom:4px ;
+}
+input{
+    width: 500px;
+    height: 50px;
+    border: 1px solid #cdcdcd;
+    font-size: 20px;
+}
+
+
+
+
+#email_id{
+    width: 220px;
+}
+#email_dns{
+    width: 160px;
+}
+#email_sel{
+    width: 80px;
+    height: 40px;
+
+}
+.gender span{
+    font-size: 18px;
+    display: block;
+    margin-top: 20px;
+}
+.gender label{
+    margin: 0 20px 0 0;
+    display: inline;
+}
+
+input[type=radio]{
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+}
+.apply label{
+    margin: 0 20px 0 0;
+    display: inline;
+}
+
+input[type=checkbox]{
+    width: 20px;
+    height: 20px;
+    margin-top: 50px;
+    margin-bottom:40px ;
+}
+
+/* legend{
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+}
+label{
+    font-size: 18px;
+}
+input{
+    width: 500px;
+    height: 50px;
+    border: 1px solid #cdcdcd;
+    font-size: 20px;
+    margin-bottom: 16px;
+    /* padding: 4px 40px 0 20px; */
+    /* margin-bottom:20px ;
+}*/
+
+/* --------------footer */
+.footer{
+    /* padding-top:50px; */
+    font-size: 14px;
+    height: 240px;
+    background:#f7f7f7;
+}
+.footer_wrap{
+    width: 1200px;
+    margin: auto;
+}
+.footer_top{
+    width: 932px;
+    height: 80px;
+}
+.footer_top ul li{
+    margin-top: 30px;
+    float: left;
+}
+
+.ft_1::after{
+    content: "|";
+    margin: 40px;
+}
+.ft_2::after{
+    content: "|";
+    margin: 40px;
+}
+.ft_3::after{
+    content: "|";
+    margin: 40px;
+}
+.ft_4::after{
+    content: "|";
+    margin: 40px;
+}
+/* -------------fb */
+.footer_bottom{
+    height: 75px;
+    /* border: 1px solid #00f; */
+}
+
+.txt1_1{
+    float: left;
+}
+.txt1_2{
+    float: left;
+}
+.txt1_3{
+    float: left;
+}
+.txt1_1::after{
+    content: "|";
+    margin: 16px;
+    
+}
+.txt1_2::after{
+    content: "|";
+    margin: 16px;
+}
+.txt1_3::after{
+    content: "|";
+    margin: 16px;
+}
+/* .fb_txt2 p{
+    float: left;
+} */
+.txt2_1{
+    float: left;
+}
+.txt2_2{
+    float: left;
+}
+.txt2_3{
+    float: left;
+}
+
+.txt2_1::after{
+    content: "|";
+    margin: 16px;
+}
+.txt2_2::after{
+    content: "|";
+    margin: 16px;
+}
+.txt2_3::after{
+    content: "|";
+    margin: 16px;
+}
+.copy{
+    margin:40px 0 30px 0;
+}
