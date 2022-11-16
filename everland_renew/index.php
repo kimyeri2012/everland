@@ -61,28 +61,26 @@ include "inc/session.php";
             <ul>
                 <li class="gnb_1"><a href="#">이용정보</a>
                     <ul>
-                        <li><a href="">뉴스공지</a></li>
+                        <li><a href="">운영/운휴</a></li>
                         <li><a href="">이용방법</a></li>
-                        <li><a href="">운영시간</a></li>
-                        <li><a href="">운휴안내</a></li>
-                        <li><a href="">교통정보</a></li>
                         <li><a href="">편의시설</a></li>
+                        <li><a href="">오시는길</a></li>
                         <li><a href="">모바일앱</a></li>
+                        <li><a href="">에버랜드 스토리</a></li>
                     </ul>
                 </li>
-                <li class="gnb_1"><a href="#">요금&프로모션</a>
+                <li class="gnb_1"><a href="#">요금안내</a>
                     <ul>
                         <li><a href="">이용요금</a></li>
                         <li><a href="">제휴카드</a></li>
-                        <li><a href="">스페셜 프로모션</a></li>
                         <li><a href="">체험 프로그램</a></li>
                     </ul>
                 </li>
                 <li class="gnb_1"><a href="#">즐길거리</a>
                     <ul>
-                        <li><a href="">추천 코스</a></li>
                         <li><a href="">어트랙션</a></li>
-                        <li><a href="">엔터테인먼트</a></li>
+                        <li><a href="">추천 코스</a></li>
+                        <li><a href="">공연 및 퍼레이드</a></li>
                         <li><a href="">주토피아(동물원)</a></li>
                         <li><a href="">플랜토피아(정원)</a></li>
                         <li><a href="">레스토랑</a></li>
@@ -99,11 +97,11 @@ include "inc/session.php";
                         <li><a href="">식물사랑단</a></li>
                     </ul>
                 </li>
-                <li class="gnb_1"><a href="#">에버랜드 더알아보기</a>
+                <li class="gnb_1"><a href="#">소통서비스</a>
                     <ul>
-                        <li><a href="">Editor's Pick</a></li>
-                        <li><a href="">에버랜드 스토리</a></li>
-                        <li><a href="">에버랜드 테마뮤직</a></li>
+                        <li><a href="notice/list.php">공지사항</a></li>
+                        <li><a href="">자주하는 질문</a></li>
+                        <li><a href="">고객소리함</a></li>
                     </ul>
                 </li>
             </ul>
@@ -138,9 +136,9 @@ include "inc/session.php";
             <ul>
                 <li class="user_lang"><a href="#">언어선택</a></li>
                 <li class="user_log"><a href="login/logout.php">로그아웃</a></li>
-                <li class="user_join"><a href="members/mypage.php">마이페이지</a></li>
+                <li class="user_join"><a href="admin/index.php">관리자페이지</a></li>
             </ul>
-            <span class="pnt_name"><?php echo $s_name; ?>님, 안녕하세요. </span>
+            <span class="pnt_name"><strong><?php echo $s_name; ?></strong>님, 안녕하세요. </span>
         </div>
         
         <!-- <a href="admin/index.php">[관리자 페이지]</a>
@@ -157,7 +155,7 @@ include "inc/session.php";
                 <li class="user_log"><a href="login/logout.php">로그아웃</a></li>
                 <li class="user_join"><a href="members/mypage.php">마이페이지</a></li>
             </ul>
-            <span class="pnt_name"><?php echo $s_name; ?>님, 안녕하세요. </span>
+            <span class="pnt_name"><strong><?php echo $s_name; ?></strong>님, 안녕하세요. </span>
 
         </div>
 
@@ -207,33 +205,33 @@ include "inc/session.php";
         </div>
 
         <section class="att">
-            <h2>어트랙션 운휴정보</h2>
+            <h2>오늘의 운휴시설</h2>
             <ul class="att_wrap att_slick">
                 <div class="att_Tex ">
                     <li><a href="#">T익스프레스</a>
                         <ul>
-                            <li><a href="#"><span class="T_1">정상운영중</span></a></li>
+                        <li><a href="#"><span>운휴중</span></a></li>
                         </ul>
                     </li>
                 </div>
                 <div class="att_amaz">
                     <li><a href="#">아마존</a>
                         <ul>
-                            <li><a href="#"><span>정상운영중</span></a></li>
+                        <li><a href="#"><span>운휴중</span></a></li>
                         </ul>
                     </li>
                 </div>
                 <div class="att_sfari">
                     <li><a href="#">사파리 월드</a>
                         <ul>
-                            <li><a href="#"><span>정상운영중</span></a></li>
+                        <li><a href="#"><span>운휴중</span></a></li>
                         </ul>
                     </li>
                 </div>
                 <div class="att_biking">
                     <li><a href="#">콜롬버스 대탐험</a>
                         <ul>
-                            <li><a href="#"><span>정상운영중</span></a></li>
+                        <li><a href="#"><span>운휴중</span></a></li>
                         </ul>
                     </li>
                 </div>
@@ -260,35 +258,6 @@ include "inc/session.php";
                         </ul>
                     </li>
                 </div>
-                <div class="att_bump">
-                    <li><a href="#">범퍼카</a>
-                        <ul>
-                            <li><a href="#"><span>운휴중</span></a></li>
-                        </ul>
-                    </li>
-                </div>
-                <div class="att_bump">
-                    <li><a href="#">범퍼카</a>
-                        <ul>
-                            <li><a href="#"><span>운휴중</span></a></li>
-                        </ul>
-                    </li>
-                </div>
-                <div class="att_bump">
-                    <li><a href="#">범퍼카</a>
-                        <ul>
-                            <li><a href="#"><span>운휴중</span></a></li>
-                        </ul>
-                    </li>
-                </div>
-                <div class="att_bump">
-                    <li><a href="#">범퍼카</a>
-                        <ul>
-                            <li><a href="#"><span>운휴중</span></a></li>
-                        </ul>
-                    </li>
-                </div>
-
 
             </ul>
             <!-- <a class="att_left" href="#">이전</a>
