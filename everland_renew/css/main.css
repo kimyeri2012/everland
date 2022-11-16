@@ -103,7 +103,7 @@
 
 /* ----------------user_mu */
 .user_mu{
-    width: 396px;
+    width: 400px;
     font-size: 14px;
     height: 38px;
     position: absolute;
@@ -304,6 +304,7 @@
     font-weight: normal;
     text-align: center;
     display: block;
+    color: red;
     /* padding-top: 100px;
     box-sizing: border-box; */
     
@@ -336,6 +337,7 @@
     font-weight: normal;
     text-align: center;
     display: block;
+    color: red;
     /* padding-top: 100px;
     box-sizing: border-box; */
     
@@ -372,6 +374,7 @@
     font-weight: normal;
     text-align: center;
     display: block;
+    color: red;
     /* padding-top: 100px;
     box-sizing: border-box; */
     
@@ -404,6 +407,7 @@
     font-weight: normal;
     text-align: center;
     display: block;
+    color: red;
     /* padding-top: 100px;
     box-sizing: border-box; */
     
