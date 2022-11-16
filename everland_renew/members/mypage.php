@@ -1,5 +1,20 @@
 <?php
 include "../inc/session.php";
+include "../inc/login_check.php";
+include "../inc/dbcon.php";
+
+//쿼리 작성
+$sql="select * from members where idx = $s_idx;"; //세션 변수 사용 -> 로그인한 사용자의 모든 데이터
+// echo $sql;
+// exit;
+//쿼리 실행
+$result = mysqli_query($dbcon, $sql);
+
+//DB에서 데이터 가져오기
+// array fetch 사용
+$array = mysqli_fetch_array($result);
+// mysqli_close($dbcon);
+
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -25,67 +40,10 @@ include "../inc/session.php";
             $(".gnb>ul>li").mouseout(function () {
                 $(this).find("ul").stop().slideUp("fast");
             })
-            // $(".gnb>ul>li").hover(function() {
-            //     $(this).find("ul").stop().slideToggle("fast")
-            // })
-
-
         })
     </script>
 
     <script type="text/javascript">
-
-        //이름입력x-> 이름 입력안내 메시지, 커서 표시
-        function join_form_check(){
-            var pwd = document.getElementById("pwd");
-            var re_pwd = document.getElementById("re_pwd");
-            var mobile = document.getElementById("mobile");
-
-            var pwd_len = pwd.value.length;
-
-            if(pwd_len < 4 || pwd_len > 12){
-                var txt = document.getElementById("err_pwd");
-                txt.textContent="* 비밀번호는 4~8글자만 입력할 수 있습니다." 
-                pwd.focus();
-                return false; 
-            }
-
-            var pwd_con = re_pwd.value;
-
-            if(pwd.value!=pwd_con){
-                var txt = document.getElementById("err_re_pwd");
-                txt.innerHTML="비밀번호와 일치하지 않습니다." 
-                re_pwd.focus();
-                return false; 
-            }
-
-            var reg = /^[0-9]+$/g;
-            if(!reg.test(mobile.value)){
-                var txt = document.getElementById("err_num");
-                txt.innerHTML="전화번호는 숫자만 입력할 수 있습니다." 
-                mobile.focus();
-                return false; 
-            }
-
-        };
-
-        function change_email(){
-            var email_dns = document.getElementById("email_dns");
-            var email_sel = document.getElementById("email_sel");
-            var idx = email_sel.options.selectedIndex;
-            var val = email_sel.options[idx].value;
-            email_dns.value = val;
-            
-            // alert(val);
-            // alert(idx);
-
-        }
-        function login_search(){
-            window.open("login_search.html", "", "width=600,height=300,left=0,top=0")
-        }
-        // function addr_search(){
-        //     window.open("addr_search.html", "", "width=600,height=300,left=0,top=0")
-        // }
         
     </script>
 </head>
@@ -221,22 +179,10 @@ include "../inc/session.php";
         </div> -->
 </header>
     <main>
-        <form  name="join_form" action="mem_info.php" method="post" onsubmit="return join_form_check()"> 
-            <fieldset>
-                <legend>마이페이지</legend>
-                <div class="u_name">
-                    <label for="u_name" class="c_title">이름</label>
-                </div>
-                <div class="u_id">
-                    <label for="u_id" class="c_title">아이디</label>
-                </div>
-                <p>
-                    <button type="submit">정보수정</button>
-                    <button type="button">돌아가기</button>
-                </p>
-  
-            </fieldset>
-        </form>
+        <h2>마이페이지</h2>
+        <p class="txt1"><strong><?php echo $s_name; ?></strong>님, 안녕하세요. </p>
+        <button type="button" class="click_mem" onclick="location.href='mem_info.php'">정보수정</button>
+
     </main>
 
     <footer class="footer">

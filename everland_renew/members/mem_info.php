@@ -51,7 +51,6 @@ $array = mysqli_fetch_array($result);
             //     $(this).find("ul").stop().slideToggle("fast")
             // })
 
-
         })
     </script>
 
@@ -97,7 +96,6 @@ $array = mysqli_fetch_array($result);
             var idx = email_sel.options.selectedIndex;
             var val = email_sel.options[idx].value;
             email_dns.value = val;
-            
             // alert(val);
             // alert(idx);
 
@@ -187,7 +185,6 @@ $array = mysqli_fetch_array($result);
               <li class="user_lang"><a href="#">언어선택</a></li>
                 <li class="user_join"><a href="new_join.php">회원가입</a></li>
                 <li class="user_log"><a href="../login/login.php">로그인</a></li>
-                  
                 
             </ul>
         </div>
@@ -195,7 +192,6 @@ $array = mysqli_fetch_array($result);
         <!-- 관리자 로그인 -->
         <div class="user_mu">
             <h2 class="hide">사용자 메뉴 </h2>
-            
             <ul>
                 <li class="user_lang"><a href="#">언어선택</a></li>
                 <li class="user_log"><a href="../login/logout.php">로그아웃</a></li>
@@ -216,7 +212,7 @@ $array = mysqli_fetch_array($result);
             <ul>
                 <li class="user_lang"><a href="#">언어선택</a></li>
                 <li class="user_log"><a href="../login/logout.php">로그아웃</a></li>
-                <li class="user_join"><a href="#">마이페이지</a></li>
+                <li class="user_join"><a href="mypage.php">마이페이지</a></li>
             </ul>
             <span class="pnt_name"><?php echo $s_name; ?>님, 안녕하세요. </span>
 
@@ -243,77 +239,79 @@ $array = mysqli_fetch_array($result);
         </div> -->
 </header>
     <main>
-        <form  name="join_form" action="insert.php" method="post" onsubmit="return join_form_check()"> 
+        <form  name="join_form" action="edit.php" method="post" onsubmit="return join_form_check()"> 
             <fieldset>
                 <legend>회원정보 수정</legend>
                 <input type="hidden" name="g_idx" value="<?php echo $array["idx"]; ?>">
-                <div class="u_name">
-                    <p class="c_title">이름</p>
-                    <?php echo $array["u_name"]; ?>
-                </div>
-                <div class="u_id">
-                    <p class="c_title">아이디</p>
-                    <?php echo $array["u_id"]; ?>
-
-                </div>
-                <div class="u_pwd">
-                    <label for="pwd" class="c_title">비밀번호</label>
-                    <input type="password" name="pwd" id="pwd"  placeholder="비밀번호">
-                    <!-- <br>*비밀번호는 4~12글자만 입력할 수 있습니다. -->
-                    <br><span id="err_pwd" class="err_txt"></span>
-                </div>
-                <div class="re_pwd">
-                    <label for="re_pwd" class="c_title">비밀번호 확인</label>
-                    <input type="password" name="re_pwd" id="re_pwd"  placeholder="비밀번호 확인">
-                    <br><span id="err_re_pwd" class="err_txt"></span>
-                </div>
-                <div class="mobile">
-                    <label for="mobile" class="c_title">전화번호</label>
-                    <input type="text" name="mobile" id="mobile" value="<?php echo $array["mobile"]; ?>">
-                    <!-- <br>"-" 없이 숫자만 입력 -->
-                    <br><span id="err_num" class="err_txt"></span>
-                </div>
-                <?php
-                    $birth = str_replace("-", "", $array["birth"]);
-                ?>
-
-                <div class="birth">
-                    <label for="birth"class="c_title">생년월일</label>
-                    <input type="text" name="birth" id="birth" value="<?php echo $birth; ?>">
-                    <br>ex) 20221006
-                </div>
-                <?php
-                    $email=explode("@", $array["email"]);               
-                ?>
-
-                <div class="email">
-                    <label for="email_id"class="c_title" >이메일</label>
-                    <input type="text" name="email_id" id="email_id" size="12" value="<?php echo $email[0];?>"> @
-                    <input type="text" name="email_dns" id="email_dns" size="12" value="<?php echo $email[1];?>">
-                    <select name="email_sel" id="email_sel" onchange="change_email()">
-                        <option value="">직접입력</option>
-                        <option value="naver.com">네이버</option>
-                        <option value="daum.com">다음</option>
-                        <option value="gmail.com">구글</option>
-                    </select>
-                    <br><span id="err_email" class="err_txt"></span>
-                </div>
- 
-                <div class="gender">
-                    <span class="c_title">성별</span>
-                    <div class="male">
-                        <input type="radio" name="gender" id="male" value="m"<?php if($array["gender"] == "m") echo " checked";?>>
-                        <label for="male">남</label>
+                <h3>로그인 정보<h3>
+                <div class="log_info">
+                    
+                    <div class="u_name">
+                        <p class="c_title">이름</p>
+                        <?php echo $array["u_name"]; ?>
                     </div>
-                    <div class="female">
-                        <input type="radio" name="gender" id="female" value="f" <?php if($array["gender"] == "f") echo " checked";?>>
-                        <label for="female">여</label>
+                    <div class="u_id">
+                        <p class="c_title">아이디</p>
+                        <?php echo $array["u_id"]; ?>
+                    </div>
+                    <div class="u_pwd">
+                        <label for="pwd" class="c_title">비밀번호</label>
+                        <input type="password" name="pwd" id="pwd"  value="<?php echo $array["pwd"]; ?>">
+                        <br><span id="err_pwd" class="err_txt"></span>
+                    </div>
+                    <div class="re_pwd">
+                        <label for="re_pwd" class="c_title">비밀번호 확인</label>
+                        <input type="password" name="re_pwd" id="re_pwd"  value="<?php echo $array["pwd"]; ?>">
+                        <br><span id="err_re_pwd" class="err_txt"></span>
+                    </div>
+                </div>
+
+                <h3>연락처 정보</h3>
+                    <div class="m_info">
+                    <div class="mobile">
+                        <label for="mobile" class="c_title">전화번호</label>
+                        <input type="text" name="mobile" id="mobile" value="<?php echo $array["mobile"]; ?>">
+                        <!-- <br>"-" 없이 숫자만 입력 -->
+                        <br><span id="err_num" class="err_txt"></span>
+                    </div>
+                    <?php
+                        $birth = str_replace("-", "", $array["birth"]);
+                    ?>
+
+                    <div class="birth">
+                        <label for="birth"class="c_title">생년월일</label>
+                        <input type="text" name="birth" id="birth" value="<?php echo $birth; ?>">
+                        <span>ex) 20221006</span>
+                    </div>
+                    <?php
+                        $email=explode("@", $array["email"]);               
+                    ?>
+
+                    <div class="email">
+                        <label for="email_id"class="c_title" >이메일</label>
+                        <input type="text" name="email_id" id="email_id" size="12" value="<?php echo $email[0];?>"> @
+                        <input type="text" name="email_dns" id="email_dns" size="12" value="<?php echo $email[1];?>">
+                        <select name="email_sel" id="email_sel" onchange="change_email()">
+                            <option value="">직접입력</option>
+                            <option value="naver.com">네이버</option>
+                            <option value="daum.com">다음</option>
+                            <option value="gmail.com">구글</option>
+                        </select>
+                        <br><span id="err_email" class="err_txt"></span>
+                    </div>
+    
+                    <div class="gender">
+                        <span class="c_title">성별</span>
+                            <input type="radio" name="gender" id="male" value="m"<?php if($array["gender"] == "m") echo " checked";?>>
+                            <label for="male">남</label>
+                            <input type="radio" name="gender" id="female" value="f" <?php if($array["gender"] == "f") echo " checked";?>>
+                            <label for="female">여</label>
                     </div>
                 </div>
 
                 <p>
                     <button type="submit">수정하기</button>
-                    <button type="button">돌아가기</button>
+                    <button type="button" onclick="history.back()">돌아가기</button>
                 </p>
             </fieldset>
         </form>
