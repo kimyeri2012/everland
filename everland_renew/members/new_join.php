@@ -34,8 +34,8 @@ include "../inc/session.php";
     </script>
     <style type="text/css">
         /* input:focus{border: 5px solid red;outline:0 none; background: #333;color: white;}; */
-        .err_txt{font-size: 14px; color: red;}
-        .dsp_txt{font-size: 16px;}
+        /* .err_txt{width:180px; font-size: 12px; color: red; padding-right:180px; display:block;}
+        .dsp_txt{font-size: 16px;} */
         /* .c_line{
             width: 500px;
             height: 50px;
@@ -292,7 +292,7 @@ include "../inc/session.php";
                 <dd class="group_2"><a href="#">홈브리지</a></dd>
             </dl>
         </div> -->
-    </header>
+</header>
     <main>
         <form  name="join_form" action="insert.php" method="post" onsubmit="return join_form_check()"> 
             <fieldset>
@@ -345,6 +345,16 @@ include "../inc/session.php";
                     </select>
                     <br><span id="err_email" class="err_txt"></span>
                 </div>
+                
+                <div class="addr">
+                    <label for="ps_code">우편번호</label>
+                    <input type="text" name="ps_code" id="ps_code">
+                    <button type="button">우편번호 검색</button><br>
+                    <label for="addr_b">기본주소</label>
+                    <input type="text" name="addr_b" id="addr_b"><br>
+                    <label for="addr_d">상세주소</label>
+                    <input type="text" name="addr_d" id="addr_d">
+                </div class="addr">
 
                 <div class="gender">
                     <span>성별</span>
