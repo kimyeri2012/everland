@@ -1,0 +1,141 @@
+/* header */
+.header{
+    width: 200px;
+    height: 1000px;
+    /* border-top:1px solid #fff; */
+    z-index: 9999;
+    /* padding-top: 22px; */
+    top: -50px;
+    background-color: #cbcbcb;
+    float: left;
+    /* margin-right: 50px; */
+}
+h1{
+    width: 200px;
+    background-color: #cbcbcb;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header ul{
+    margin-top: 30px;
+}
+
+header li a{
+    padding: 20px;
+    text-align: center;
+    display: block;
+
+}
+li a:hover {
+    text-align: center;
+    background: #333;
+    color: #fff;
+}
+.home {
+    background : rgb(130, 127, 127);
+    color: #fff;
+}
+
+/* logo */
+/* .logo{
+    width:160px;
+    height:66px;
+    margin:10px 0 15px 60px;
+    float: left;
+}
+.logo a {
+    display: block;
+    width: 120px;
+    height: 66px;
+    background: url(../images/logo3.jpg)no-repeat;
+    text-indent: -9999px;
+} */
+
+
+
+/* ----------------user_mu */
+.user_mu{
+    width: 400px;
+    font-size: 14px;
+    height: 38px;
+    position: absolute;
+    top: 10px;
+    right: 64px;
+    /* background-color: #00f; */
+}
+.pnt_name{
+    float: right;
+}
+.user_mu span{
+    margin-right:20px;
+}
+
+.user_log{
+    float: right;
+}
+.user_log:after{
+    content:"|";
+    margin:10px;
+}
+.user_join{
+    float: right;
+}
+.user_join:after{
+    content:"|";
+    margin:10px;
+}
+
+.user_lang{
+    float: right;
+    
+}
+
+
+/* ---------------------------------------main */
+.main{
+    width: auto;
+    margin: auto;
+    
+}
+table{
+    width: 100%; 
+    padding-top: 115px;
+    display: block;}
+h2{
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+}
+table, td{
+    border-collapse:collapse;
+}
+td,th{
+    padding: 10px;
+    text-align: center;
+}
+td{
+    height: 66px;
+}
+.mem_list_title{
+    border-top:2px solid #999;
+    border-bottom:1px solid #999
+}
+.mem_list_content{
+    border-bottom:0.5px solid #999;
+}
+.no{width:40px}
+.u_name{width:60px}
+.u_id{width:100px}
+.mobile{width:120px}
+.birth{width:100px}
+.email{width:180px}
+.addr{width:400px}
+.gender{width:40px}
+.reg_date{width:120px}
+.modify{width:120px}
+
+.pager{
+    margin-top: 30px ;
+    text-align: center;
+}
