@@ -51,7 +51,7 @@ if($e_pageNum > $total_page){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVERLAND</title>
+    <title>공지사항</title>
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <link rel="stylesheet" type="text/css" href="../css/notice.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
