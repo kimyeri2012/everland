@@ -219,7 +219,10 @@ input{
     height: 40px;
 
 }
-
+.addr button{
+    width: 140px;
+    height: 40px;
+}
 
 input[type=radio]{
     width: 20px;
@@ -252,7 +255,7 @@ input[type=radio]{
 
 } */
 
-button{
+.finish button{
     margin-top:50px ;
     width: 140px;
     height: 40px;
