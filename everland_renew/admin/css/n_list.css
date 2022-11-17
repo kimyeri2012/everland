@@ -91,7 +91,6 @@ li a:hover {
     
 }
 
-
 /* ---------------------------------------main */
 .main{
     width: auto;
@@ -102,11 +101,11 @@ table{
     width: 100%; 
     padding-top: 115px;
     display: block;}
-h2{
+/* h2{
     font-size: 30px;
     text-align: center;
     margin: auto;
-}
+} */
 table, td{
     border-collapse:collapse;
 }
@@ -114,21 +113,28 @@ td,th{
     padding: 10px;
     text-align: center;
 }
-.mem_list_title{
+td{
+    height: 46px;
+}
+.notice_list_title{
     border-top:2px solid #999;
-    border-bottom:1px solid #999
+    border-bottom:2px solid #999
 }
-.mem_list_content{
-    border-bottom:1px solid #999;
+.notice_list_content{
+    border-bottom:0.5px solid #999;
 }
-.no{width:40px}
-.u_name{width:60px}
-.u_id{width:100px}
-.mobile{width:120px}
-.birth{width:100px}
-.email{width:180px}
-.addr{width:400px}
-.gender{width:40px}
-.reg_date{width:120px}
-.modify{width:120px}
+.total{
+    padding-top: 30px;
+}
+.no{width:50px}
+.type{width:100px}
+.n_title{width:420px}
+.w_date{width:180px}
+.writer{width:220px}
+.cnt{width:80px}
+.modify{width:140px}
 
+.pager{
+    margin-top: 30px;
+    text-align: center;
+}
