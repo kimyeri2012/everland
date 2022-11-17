@@ -99,7 +99,7 @@ include "inc/session.php";
                 </li>
                 <li class="gnb_1"><a href="#">소통서비스</a>
                     <ul>
-                        <li><a href="notice/list.php">공지사항</a></li>
+                        <li><a href="notice/n_list.php">공지사항</a></li>
                         <li><a href="">자주하는 질문</a></li>
                         <li><a href="">고객소리함</a></li>
                     </ul>
