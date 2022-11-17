@@ -1,5 +1,6 @@
 <?php
 include "inc/session.php";
+include "inc/admin_check.php";
  
 ?>
 
@@ -25,10 +26,10 @@ include "inc/session.php";
 
 <body>
     <header id="header" class="header">
-        <h1 class="ADMIN">ADMIN</a></h1>
+        <h1 class="ADMIN"><a href="index.php">ADMIN</a></h1>
         <ul>
-            <li><a href="#">회원관리</a></li>
-            <li><a href="#">공지사항</a></li>
+            <li><a href="members/m_list.php">회원관리</a></li>
+            <li><a href="notice/n_list.php">공지사항</a></li>
             <li><a href="#">일반예약</a></li>
             <li><a href="#">학생예약</a></li>
             <li><a href="#">단체예약</a></li>
