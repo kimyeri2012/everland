@@ -9,6 +9,10 @@ $birth = $_POST["birth"];
 $email_id = $_POST["email_id"];
 $email_dns = $_POST["email_dns"];
 $email = $email_id."@".$email_dns;
+$ps_code = $_POST["ps_code"];
+$addr_b = $_POST["addr_b"];
+$addr_d = $_POST["addr_d"];
+$addr = $ps_code." ".$addr_b." ".$addr_d;
 $gender = $_POST["gender"];
 $apply = $_POST["apply"];
 
@@ -29,7 +33,7 @@ include "../inc/dbcon.php";
 
 //쿼리 작성
 
-$sql="insert into members(u_name, u_id, pwd, mobile, birth, email, gender, reg_date) values('$u_name', '$u_id', '$pwd', '$mobile', '$birth', '$email', '$gender', '$reg_date');" ;
+$sql="insert into members(u_name, u_id, pwd, mobile, birth, email, ps_code, addr_b, addr_d, gender, reg_date) values('$u_name', '$u_id', '$pwd', '$mobile', '$birth', '$email', '$ps_code', '$addr_b', '$addr_d', '$gender', '$reg_date');" ;
 
 // echo $sql;
 // exit;
@@ -48,8 +52,6 @@ echo "
         location.href=\"welcome.php\";
     </script>
     ";
-
-
 
 
 ?>

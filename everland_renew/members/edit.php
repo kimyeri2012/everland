@@ -12,6 +12,10 @@ $birth = $_POST["birth"];
 $email_id = $_POST["email_id"];
 $email_dns = $_POST["email_dns"];
 $email = $email_id."@".$email_dns;
+$ps_code = $_POST["ps_code"];
+$addr_b = $_POST["addr_b"];
+$addr_d = $_POST["addr_d"];
+$addr = $ps_code." ".$addr_b." ".$addr_d;
 $gender = $_POST["gender"];
 
 
@@ -29,8 +33,8 @@ include "../inc/dbcon.php";
 
 //쿼리 작성
 
-$sql="update members set pwd='$pwd', mobile='$mobile', birth = '$birth', email = '$email', gender = '$gender' where idx=$s_idx; ;" ;
-$sql_nPwd= "update members set mobile='$mobile', birth = '$birth', email = '$email', gender = '$gender' where idx=$s_idx; ;" ;
+$sql="update members set pwd='$pwd', mobile='$mobile', birth = '$birth', email = '$email', ps_code = '$ps_code', addr_b = '$addr_b', addr_d = '$addr_d', gender = '$gender' where idx=$s_idx; ;" ;
+$sql_nPwd= "update members set mobile='$mobile', birth = '$birth', email = '$email', ps_code = '$ps_code', addr_b = '$addr_b', addr_d = '$addr_d', gender = '$gender' where idx=$s_idx; ;" ;
 // echo $sql;
 // exit;
 

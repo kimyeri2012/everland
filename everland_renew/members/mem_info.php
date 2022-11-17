@@ -299,6 +299,16 @@ $array = mysqli_fetch_array($result);
                         </select>
                         <br><span id="err_email" class="err_txt"></span>
                     </div>
+
+                    <div class="addr">
+                        <label for="ps_code" class="c_title">우편번호</label>
+                        <input type="text" name="ps_code" id="ps_code" value="<?php echo $array["ps_code"];?>">
+                        <button type="button">우편번호 검색</button><br>
+                        <label for="addr_b" class="c_title">기본주소</label>
+                        <input type="text" name="addr_b" id="addr_b" value="<?php echo $array["addr_b"];?>"><br>
+                        <label for="addr_d" class="c_title">상세주소</label>
+                        <input type="text" name="addr_d" id="addr_d" value="<?php echo $array["addr_d"];?>">
+                    </div>
     
                     <div class="gender">
                         <span class="c_title">성별</span>
@@ -309,10 +319,10 @@ $array = mysqli_fetch_array($result);
                     </div>
                 </div>
 
-                <p>
+                <div class="finish">
                     <button type="submit">수정하기</button>
                     <button type="button" onclick="history.back()">돌아가기</button>
-                </p>
+                </div>
             </fieldset>
         </form>
     </main>
