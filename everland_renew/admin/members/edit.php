@@ -4,7 +4,7 @@
 include "../inc/session.php";
 
 //이전 페이지에서 값 가져오기
-
+$g_idx=$_GET["g_idx"];
 
 $pwd = $_POST["pwd"];
 $mobile = $_POST["mobile"];
@@ -29,8 +29,8 @@ include "../inc/dbcon.php";
 
 //쿼리 작성
 
-$sql="update members set pwd='$pwd', mobile='$mobile', birth = '$birth', email = '$email', gender = '$gender' where idx=$s_idx; ;" ;
-$sql_nPwd= "update members set mobile='$mobile', birth = '$birth', email = '$email', gender = '$gender' where idx=$s_idx; ;" ;
+$sql="update members set pwd='$pwd', mobile='$mobile', birth = '$birth', email = '$email', gender = '$gender' where idx=$g_idx; ;" ;
+$sql_nPwd= "update members set mobile='$mobile', birth = '$birth', email = '$email', gender = '$gender' where idx=$g_idx; ;" ;
 // echo $sql;
 // exit;
 
@@ -52,7 +52,7 @@ mysqli_close($dbcon);
 echo "
     <script type=\"text/javascript\">
         alert(\"수정되었습니다.\");
-        location.href = \"mem_info.php\";
+        location.href = \"m_info.php?g_idx=$g_idx\";
     </script>
     ";
 
