@@ -37,22 +37,6 @@ li a:hover {
     color: #fff;
 }
 
-/* logo */
-/* .logo{
-    width:160px;
-    height:66px;
-    margin:10px 0 15px 60px;
-    float: left;
-}
-.logo a {
-    display: block;
-    width: 120px;
-    height: 66px;
-    background: url(../images/logo3.jpg)no-repeat;
-    text-indent: -9999px;
-} */
-
-
 
 /* ----------------user_mu */
 .user_mu{
@@ -93,42 +77,58 @@ li a:hover {
 
 
 /* ---------------------------------------main */
-.main{
-    width: auto;
+form{
+    width: 100%;
     margin: auto;
-    
 }
-table{
-    width: 100%; 
-    padding-top: 115px;
-    display: block;}
-h2{
+fieldset{
+    border: none;
+}
+legend{
+    width: 100%;
     font-size: 30px;
     text-align: center;
-    margin: auto;
+    padding: 50px 0 30px 0;
 }
-table, td{
-    border-collapse:collapse;
+form div{
+    border-bottom:0.5px solid #cbcbcb ;
 }
-td,th{
-    padding: 10px;
+.writer{
+    border-top: 2px solid #333;
+}
+.up_file{
+    border-bottom: 2px solid #333;
+}
+label{
+    width: 120px;
+    /* background-color: #e9e9e9; */
+    display:inline-block;
+    padding: 20px;
     text-align: center;
 }
-.mem_list_title{
-    border-top:2px solid #999;
-    border-bottom:1px solid #999
+select{
+    width: 200px;
+    height: 30px;
 }
-.mem_list_content{
-    border-bottom:1px solid #999;
-}
-.no{width:40px}
-.u_name{width:60px}
-.u_id{width:100px}
-.mobile{width:120px}
-.birth{width:100px}
-.email{width:180px}
-.addr{width:400px}
-.gender{width:40px}
-.reg_date{width:120px}
-.modify{width:120px}
 
+input{
+    width: 500px;
+    height: 30px;
+
+}
+textarea{
+    width: 700px;
+    height: 340px;
+    margin-top: 16px;
+}
+
+.bottom{
+    margin-top: 30px;
+    border: none;
+    text-align: center;
+}
+.bottom button{
+    width: 100px;
+    height: 40px;
+
+}
