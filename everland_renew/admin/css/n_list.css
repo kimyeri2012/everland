@@ -123,18 +123,28 @@ td{
 .notice_list_content{
     border-bottom:0.5px solid #999;
 }
+.notice_content_title{
+    text-align: left;
+    padding-left: 50px;
+}
 .total{
     padding-top: 30px;
 }
 .no{width:50px}
 .type{width:100px}
-.n_title{width:420px}
-.w_date{width:180px}
-.writer{width:220px}
+.n_title{width:580px;}
+.w_date{width:110px}
+.writer{width:120px}
 .cnt{width:80px}
 .modify{width:140px}
 
 .pager{
     margin-top: 30px;
     text-align: center;
+}
+.edit{
+    color: rgb(0, 0, 154);
+}
+.delete{
+    color: red;
 }
