@@ -125,7 +125,7 @@ if($e_pageNum > $total_page){
                 </li>
                 <li class="gnb_1"><a href="#">소통서비스</a>
                     <ul>
-                        <li><a href="notice/notice.php">공지사항</a></li>
+                        <li><a href="n_list.php">공지사항</a></li>
                         <li><a href="">자주하는 질문</a></li>
                         <li><a href="">고객소리함</a></li>
                     </ul>
@@ -221,7 +221,7 @@ if($e_pageNum > $total_page){
                 <th class="type">구분</th>
                 <th class="n_title">제목</th>
                 <th class="w_date">날짜</th>
-                <th class="cnt">조회수</th>
+                <!-- <th class="cnt">조회수</th> -->
                 
             </tr>
             <?php
@@ -253,7 +253,7 @@ if($e_pageNum > $total_page){
             </td>
             <?php $w_date = substr($array["w_date"], 0, 10); ?>
             <td><?php echo $w_date; ?></td>
-            <td><?php echo $array["cnt"]; ?></td>
+            <!-- <td><?php echo $array["cnt"]; ?></td> -->
         </tr>
         <?php
                 $i--;
@@ -266,25 +266,25 @@ if($e_pageNum > $total_page){
         // pager : 이전 페이지
         if($page <= 1){
         ?>
-        <a href="list.php?page=1">이전</a>
+        <a href="n_list.php?page=1">이전</a>
         <?php } else{ ?>
-        <a href="list.php?page=<?php echo ($page - 1); ?>">이전</a>
+        <a href="n_list.php?page=<?php echo ($page - 1); ?>">이전</a>
         <?php }; ?>
 
         <?php
         // pager : 페이지 번호 출력
         for($print_page = $s_pageNum;  $print_page <= $e_pageNum; $print_page++){
         ?>
-        <a href="list.php?page=<?php echo $print_page; ?>"><?php echo $print_page; ?></a>
+        <a href="n_list.php?page=<?php echo $print_page; ?>"><?php echo $print_page; ?></a>
         <?php }; ?>
 
         <?php
         // pager : 다음 페이지
         if($page >= $total_page){
         ?>
-        <a href="list.php?page=<?php echo $total_page; ?>">다음</a>
+        <a href="n_list.php?page=<?php echo $total_page; ?>">다음</a>
         <?php } else{ ?>
-        <a href="list.php?page=<?php echo ($page + 1); ?>">다음</a>
+        <a href="n_list.php?page=<?php echo ($page + 1); ?>">다음</a>
         <?php };
         mysqli_close($dbcon);   
         ?>
