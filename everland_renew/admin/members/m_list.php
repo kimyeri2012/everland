@@ -61,11 +61,19 @@ if($e_pageNum > $total_page){
     <title>회원관리</title>
 
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
-    <link rel="stylesheet" type="text/css" href="../css/mem_list.css">
+    <link rel="stylesheet" type="text/css" href="../css/m_list.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/slick-1.8.1/slick/slick.css"/>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="/slick-1.8.1/slick/slick.js"></script>
+    <script>
+        function mem_del(re){
+            var rtn_val = confirm("정말 삭제하시겠습니까?");
+            if(rtn_val){
+                location.href ="m_delete.php?g_idx="+ re;
+            };
+        };
+    </script>
 
 </head>
 <body>
@@ -96,11 +104,10 @@ if($e_pageNum > $total_page){
         <div class="user_mu">
             <h2 class="hide">사용자 메뉴 </h2>
             <ul>
-                <li class="user_lang"><a href="#">언어선택</a></li>
+                <li class="user_lang"><a href="../../index.php">홈으로</a></li>
                 <li class="user_log"><a href="../login/logout.php">로그아웃</a></li>
-                <li class="user_join"><a href="#">마이페이지</a></li>
             </ul>
-            <span class="pnt_name"><?php echo $s_name; ?>님, 안녕하세요. </span>
+            <span class="pnt_name"><strong><?php echo $s_name; ?></strong>님, 안녕하세요. </span>
         </div>
 
         <?php }else{ ?>
@@ -153,7 +160,7 @@ if($e_pageNum > $total_page){
         ?>
             <tr class="mem_list_content">
                     <td><?php echo $i?></td>
-                    <td><?php echo $array["u_name"]?></td>
+                    <td><a href="m_info.php?g_idx=<?php echo $array["idx"];?>"><?php echo $array["u_name"]?></a></td>
                     <td><?php echo $array["u_id"]?></td>
                     <td><?php echo $array["mobile"]?></td>
                     <td><?php echo $array["birth"]?></td>
@@ -163,12 +170,12 @@ if($e_pageNum > $total_page){
                     ?>
                     <td><?php echo $addr; ?></td>
                     <td><?php echo $array["gender"]?></td>
-                    <td><?php echo $array["reg_date"]?></td>
+                    <?php $reg_date = substr($array["reg_date"], 0, 10); ?>
+                    <td><?php echo $reg_date?></td>
                     <td>
-                        <a href="">[수정]</a>
-                        <a href="">[삭제]</a>
+                        <a href="m_info.php?g_idx=<?php echo $array["idx"];?>" class="edit">[수정] </a>
+                        <a class="delete" href="#"  onclick="mem_del(<?php echo $array["idx"]; ?>)" > [삭제]</a>
                     </td>
-
             </tr>
         <?php 
             $i++;
