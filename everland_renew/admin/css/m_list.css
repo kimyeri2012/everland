@@ -132,10 +132,16 @@ td{
 .email{width:180px}
 .addr{width:400px}
 .gender{width:40px}
-.reg_date{width:120px}
-.modify{width:120px}
+.reg_date{width:100px}
+.modify{width:140px}
 
 .pager{
     margin-top: 30px ;
     text-align: center;
+}
+.edit{
+    color: rgb(0, 0, 154);
+}
+.delete{
+    color: red;
 }
