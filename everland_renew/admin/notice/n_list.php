@@ -64,6 +64,14 @@ if($e_pageNum > $total_page){
     <link rel="stylesheet" type="text/css" href="/slick-1.8.1/slick/slick.css"/>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="/slick-1.8.1/slick/slick.js"></script>
+    <script>
+        function remove_notice(g_no){
+            var ck = confirm("정말 삭제하시겠습니까?");
+            if(ck){
+                location.href="n_delete.php?n_idx="+g_no;
+            };
+        };
+    </script>
 </head>
 <body>
     <header id="header" class="header">
@@ -93,11 +101,10 @@ if($e_pageNum > $total_page){
         <div class="user_mu">
             <h2 class="hide">사용자 메뉴 </h2>
             <ul>
-                <li class="user_lang"><a href="#">언어선택</a></li>
+                <li class="user_lang"><a href="../../index.php">홈으로</a></li>
                 <li class="user_log"><a href="../login/logout.php">로그아웃</a></li>
-                <li class="user_join"><a href="#">마이페이지</a></li>
             </ul>
-            <span class="pnt_name"><?php echo $s_name; ?>님, 안녕하세요. </span>
+            <span class="pnt_name"><strong><?php echo $s_name; ?></strong>님, 안녕하세요. </span>
         </div>
 
         <?php }else{ ?>
@@ -150,7 +157,7 @@ if($e_pageNum > $total_page){
             <td><?php echo $i; ?></td>
             <td><?php echo $array["type"]; ?></td>
             <td class="notice_content_title">
-                <a href="view.php?n_idx=<?php echo $array["idx"]; ?>">
+                <a href="modify.php?n_idx=<?php echo $array["idx"]; ?>">
                 <?php echo $array["n_title"]; ?>
                 </a>
             </td>
@@ -159,8 +166,8 @@ if($e_pageNum > $total_page){
             <td><?php echo $array["writer"]; ?></td>
             <td><?php echo $array["cnt"]; ?></td>
             <td>
-                <a href="modify.php?n_idx=<?php echo $array["idx"]; ?>">[수정]</a>
-                <a href="#" onclick="remove_notice(<?php echo $array["idx"]; ?>)">[삭제]</a>
+                <a href="modify.php?n_idx=<?php echo $array["idx"]; ?>" class="edit">[수정]</a>
+                <a href="#" class="delete" onclick="remove_notice(<?php echo $array['idx']; ?>)">[삭제]</a>
             </td>
         </tr>
         <?php
