@@ -97,7 +97,8 @@ include "../inc/admin_check.php";
         <fieldset>
             <legend>공지사항</legend>
             <div class="writer">
-                작성자 <?php echo $s_name; ?>
+                <label for="type">작성자</label>
+                 <?php echo $s_name; ?>
                 <!-- <input type="hidden"> -->
             </div>
 
@@ -120,14 +121,14 @@ include "../inc/admin_check.php";
                 <label for="n_content">내용</label>
                 <textarea cols="60" rows="10" name="n_content" id="n_content"></textarea>
             </div>
-            <div>
+            <div class="up_file">
                 <label for="up_file">파일 업로드</label>
                 <input type="file" name="up_file" id="up_file">
             </div>
 
-            <div>
-                <button type="button" onclick="history.back()">이전 페이지</button>
-                <button type="submit">등록하기</button>
+            <div class="bottom">
+                <button type="submit">등록</button>
+                <button type="button" onclick="history.back()">취소</button>
             </div>
         </fieldset>
     </form>
