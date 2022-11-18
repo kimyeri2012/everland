@@ -55,7 +55,6 @@ include "inc/admin_check.php";
             <ul>
                 <li class="user_lang"><a href="../index.php">홈으로</a></li>
                 <li class="user_log"><a href="login/logout.php">로그아웃</a></li>
-                <li class="user_join"><a href="members/mypage.php">마이페이지</a></li>
             </ul>
             <span class="pnt_name"><strong><?php echo $s_name; ?></strong>님, 안녕하세요. </span>
         </div>
