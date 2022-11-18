@@ -7,7 +7,7 @@ $n_title = $_POST["n_title"];
 $n_content = $_POST["n_content"];
 
 
-if($_FILES["up_file"] != NULL){
+if($_FILES["f_size"] > 0){
     $tmp_name = $_FILES["up_file"]["tmp_name"];
     $name = $_FILES["up_file"]["name"];
     $up= move_uploaded_file($tmp_name, "../../data/$name");
