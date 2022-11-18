@@ -147,11 +147,12 @@ main{
 h2{
     font-size: 40px;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 80px;
+    padding-bottom: 60px;
 }
 form{
     text-align: center;
-    padding:100px 0 40px 0;
+    padding:10px 0 40px 0;
 }
 
 .s_type{
@@ -164,7 +165,9 @@ form{
 }
 .s_bt{
     width: 50px;
-    height: 48px;
+    height: 46px;
+    background-color: orange;
+    border:none;
 }
 
 
@@ -203,18 +206,21 @@ td{
     border-bottom: 1px solid orange;
 }
 .notice_list_content{
-    border-bottom:0.5px solid #999;
+    border-bottom:0.5px solid #cbcbcb;
+    font-size: 16px;
+    
 }
 .notice_content_title{
     padding-left: 60px;
     text-align: left;
+    font-size: 18px;
 }
 .total{
     padding-top: 30px;
 }
 .no{width:80px}
 .type{width:180px}
-.n_title{width:650px;}
+.n_title{width:700px;}
 .w_date{width:180px}
 .writer{width:220px}
 .cnt{width:80px}
@@ -227,7 +233,8 @@ td{
 
 /* ----------footer */
 .footer{
-    font-size: 16px;
+    margin-top: 150px;
+    font-size: 14px;
     height: 240px;
     background:#f7f7f7;
 }
